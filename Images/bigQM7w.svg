@@ -46,8 +46,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.44722038"
-     inkscape:cx="271.02826"
-     inkscape:cy="811.68035"
+     inkscape:cx="672.39637"
+     inkscape:cy="999.50721"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -444,14 +444,14 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444017px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.26458299"
-       x="-489.72552"
-       y="284.04019"
+       x="-484.43408"
+       y="284.0112"
        id="text866-56"
        transform="rotate(0.31363827)"><tspan
          sodipodi:role="line"
          id="tspan864-2"
-         x="-489.72552"
-         y="284.04019"
+         x="-484.43408"
+         y="284.0112"
          style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:19.75559998px;font-family:arial;-inkscape-font-specification:'arial Bold';stroke-width:0.26458299">Value</tspan></text>
     <text
        xml:space="preserve"
@@ -489,18 +489,18 @@
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444017px;line-height:1.25;font-family:arial;-inkscape-font-specification:arial;letter-spacing:0px;word-spacing:0px;stroke-width:0.26458299"
-       x="-529.70184"
-       y="315.1597"
+       x="-524.4101"
+       y="315.11209"
        id="text866-9-3"
        transform="rotate(0.51564634)"><tspan
          sodipodi:role="line"
-         x="-529.70184"
-         y="315.1597"
+         x="-524.4101"
+         y="315.11209"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:arial;-inkscape-font-specification:'arial Italic';stroke-width:0.26458299"
-         id="tspan851-5">- high-throughput DFT</tspan><tspan
+         id="tspan851-5">- 0.5 million CPU hrs</tspan><tspan
          sodipodi:role="line"
-         x="-529.70184"
-         y="339.85416"
+         x="-524.4101"
+         y="339.80655"
          style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:19.75555611px;font-family:arial;-inkscape-font-specification:'arial Italic';stroke-width:0.26458299"
          id="tspan891">- expert curation</tspan></text>
     <text
