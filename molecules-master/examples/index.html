@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./../dist/molecules.css">
+    <script src="./../dist/molecules.min.js"></script>
+    <script src="./../lib/d3.min.js"></script>
+</head>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 96%;
+	font-family: arial, helvetica, sans-serif;
+    font-size: 12px;
+}
+
+#wrapper {
+    position: relative;
+    min-width: 200px;
+    min-height: 320px;
+	width: 100%;
+    height: 100%;
+	margin: auto;
+	padding: 0px;
+    border: 0px solid #999;
+	box-shadow: 0 0 5px rgba(159,159,159,0.8);
+    -o-box-shadow: 0 0 25px rgba(159,159,159,0.8);
+    -webkit-box-shadow: 0 0 25px rgba(159,159,159,0.8);
+
+}
+
+#header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 85px;
+    margin: auto;
+    padding: 0px;
+    border: 0px solid #bbb;
+}
+
+#user-input {
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: 5px;
+    padding-top: 25px;
+    border: 0px solid #bbb;
+}
+
+#content-main {
+    position: relative;
+    top: 90px;
+    width: 100%;
+    height: 65%;
+    margin: 0px;
+    padding: 1px;
+    border: 0px solid #bbb;
+}
+
+#content-box {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    border: 0px solid #bbb;
+}
+
+#plot {
+    height: 100%;
+    width: 75%;
+    margin: 0px;
+    float: left;
+    overflow: hidden;
+    border: 0px solid #bbb;
+}
+
+#sidebar {
+    height: 100%;
+    width: 30%;
+    margin: 0px;
+    float: right;
+    padding-right: 1%;
+    overflow: hidden;
+    border: 0px solid #000;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    min-height: 40px;
+	margin: 0px;
+	padding: 0px;
+    border: 0px solid #bbb;
+}
+
+#content-source {
+    width: auto;
+    height: auto;
+    min-height: 40px;
+    margin: 0px;
+    padding: 10px;
+    overflow: hidden;
+    float: right;
+    border: 0px solid #bbb;
+}
+
+#content-source a {
+    text-align: center;
+    font-size: 14px;
+    font-weight: normal;
+    color: #53B2C8;
+}
+
+#content-info {
+    width: auto;
+    min-height: 10px;
+    margin: 0px;
+    padding: 10px;
+    float: left;
+    overflow: hidden;
+    border: 0px solid #bbb;
+}
+
+.background {
+    fill: #eee;
+}
+
+.group {
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.examples {
+    color: #999;
+    margin-top: 0px;
+    padding-left: 15px;
+    font-size: 12px;
+    font-weight: normal;
+    font-family: 'Lucida Sans Unicode';
+}
+
+.examples a:link {
+    color: #53B2C8;
+    font-weight: bold;
+}
+
+.examples a:visited {
+    color: #53B2C8;
+    font-weight: bold;
+}
+
+.examples a:hover {
+    color: #53B2C8;
+    font-weight: bold;
+}
+
+.examples a:active {
+    color: #53B2C8;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    font-size: 16px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+input:focus {
+    outline: none;
+}
+
+input:focus ~ label, input:valid ~ label {
+    top: -15px;
+    font-size: 13px;
+    color: #5264AE;
+}
+
+label {
+    color: #999;
+    font-size: 16px;
+    font-weight: normal;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+other {
+    color: #999;
+    font-size: 14px;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+section {
+    color: #555;
+    font-size: 16px;
+    font-weight: normal;
+    vertical-align: middle;
+}
+
+.bar {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.bar:before, .bar:after {
+    content: '';
+    height: 2px;
+    width: 0px;
+    bottom: 0px;
+    position: absolute;
+    background: #5264AE;
+    transition: 0.2s ease all;
+    -moz-transition: 0.2s ease all;
+    -webkit-transition: 0.2s ease all;
+}
+
+.bar:before { left: 50%; }
+.bar:after { right: 50%; }
+
+input:focus ~ .bar:before, input:focus ~ .bar:after { width: 50%; }
+
+.highlight {
+    position: absolute;
+    height: 60%;
+    width: 100px;
+    top: 25%;
+    left: 0%;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+}
+
+@-webkit-keyframes inputHighlighter {
+    from { background: #5264AE; }
+    to { width: 0; background: transparent; }
+}
+
+@-moz-keyframes inputHighlighter {
+    from { background: #5264AE; }
+    to { width: 0; background: transparent; }
+}
+
+@keyframes inputHighlighter {
+    from { background: #5264AE; }
+    to { width: 0; background: transparent; }
+}
+
+.svg-container {
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    padding-bottom: 0%;
+    bottom: 0px;
+    vertical-align: top;
+    overflow: hidden;
+}
+
+.svg-container-responsive {
+    display: inline-block;
+    position: relative;
+    padding: 0%;
+    width: 100%;
+    height: auto;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 2px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Lucida Sans Unicode';
+    background: white;
+    border: 1px solid #111;
+    border-radius: 6px;
+    pointer-events: none;
+}
+
+</style>
+
+<body>
+
+<div id="wrapper">
+
+    <div id="header">
+
+        <div id="examples">
+            <p class="examples"><i>  </i>
+                <a href="#" onclick="parseInput(randomMolecule[Math.floor(Math.random()*randomMolecule.length)])">Load a random molecule from MolDis</a>
+            </p>
+        </div>
+
+    </div>
+
+    <div id="content-main">
+
+        <div id="plot"></div>
+
+        <div id="sidebar">
+            <section><div id="formatOptions"></div></section>
+        </div>
+
+    </div>
+
+    <div id="footer">
+
+        <div id="content-info">
+            <other><div id="molecularFormula"></div></other>
+            <other><div id="molecularWeight"></div></other>
+        </div>
+
+        <div id="user-input"><form onsubmit="return false"><div id="user" class="group">
+            <input type="text" required value="CC(N)CC=O" onpaste="parseInput(this.value)" onkeyup="keyboardCallback(event)">
+          <!--  <span class="highlight"></span> -->
+          <!--  <span class="bar"></span> -->
+          <!--  <label id="textbox">Input SMILES notation...</label>  -->
+        </div></form></div>
+
+    </div>
+
+</div>
+
+</body>
+
+<script>
+
+//
+// Global
+//
+var userInput = document.getElementsByTagName("input")[0].value;
+// var userExample = 'C12=CC=CC=C1C3=C(C=CC=C3)C=C2';//'CC(N)CC=O';
+var userExample = 'CN1C=NC2=C1C(=O)N(C(=O)N2C)C';
+
+//
+// Keyboard Callback
+//
+var keyboardCallback = function(event) {
+
+    //var input = document.getElementsByTagName("input")[0].value;
+
+    // 0-9
+    //if (event.keyCode >= 48 && event.keyCode <= 57) { return null; }
+
+    // 'backspace'
+    //else if (event.keyCode === 8) { return null; }
+
+    // '-', '=', '.'
+    //else if (event.keyCode === 189 || event.keyCode === 187 || event.keyCode === 190) { return null; }
+
+    // non-alphabet
+    //else if (event.keyCode < 65 || event.keyCode > 90) { return null; }
+
+    // 'enter'
+    if (event.keyCode === 13) {
+        var input = document.getElementsByTagName("input")[0].value;
+        parseInput(input);
+    }
+
+    else { return null; }
+
+};
+
+//
+// Input Callback
+//
+var parseInput = function(input) {
+
+    if (userInput === input && userInput !== userExample) { return null; }
+
+    document.getElementsByTagName("input")[0].value = input;
+
+    if (typeof input !== 'string' || input.length === 0 || input.length > 1000 ) { return null; }
+
+    var molecule = Molecules.load.smiles(input)
+
+    if (typeof molecule === 'object') { update(molecule); }
+
+    userInput = input;
+
+};
+
+//
+// molecules.js --> d3.js
+//
+function convertMolecule(molecule) {
+
+    var atoms = Object.keys(molecule.atoms);
+    var bonds = Object.keys(molecule.bonds);
+
+    var nodes = [];
+    var links = [];
+
+    for (var i = 0; i < atoms.length; i++) {
+
+        nodes.push({
+            id: molecule.atoms[atoms[i]].id,
+            name: molecule.atoms[atoms[i]].name,
+            protons: molecule.atoms[atoms[i]].protons,
+            neutrons: molecule.atoms[atoms[i]].neutrons,
+            electrons: molecule.atoms[atoms[i]].electrons,
+            bonds: molecule.atoms[atoms[i]].bonds,
+            properties: molecule.atoms[atoms[i]].properties
+        })
+    }
+
+    for (var i = 0; i < bonds.length; i++) {
+
+        links.push({
+            id: molecule.bonds[bonds[i]].id,
+            name: molecule.bonds[bonds[i]].name,
+            value: molecule.bonds[bonds[i]].value,
+            source: atoms.indexOf(molecule.bonds[bonds[i]].atoms[0]),
+            target: atoms.indexOf(molecule.bonds[bonds[i]].atoms[1]),
+            order: molecule.bonds[bonds[i]].order
+        })
+    }
+
+    return {nodes: nodes, links: links};
+}
+
+//
+// HTML Elements
+//
+var topPanel    = document.getElementById("header");
+var centerPanel = document.getElementById("plot");
+var sidePanel   = document.getElementById("sidebar");
+var bottomPanel = document.getElementById("footer");
+
+//
+// Display Properties
+//
+var mainPanelHeight  = centerPanel.offsetHeight;
+var mainPanelWidth   = centerPanel.offsetWidth;
+
+var mainPanel = d3.select("#plot")
+    .append("div")
+    .classed("svg-container-responsive", true)
+    .append("svg")
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "0 0 " + mainPanelWidth + " " +  mainPanelHeight + "")
+    .classed("svg-content-responsive", true)
+
+var supportPanel = d3.select("#sidebar")
+    .append("div")
+    .classed("svg-container-responsive", true)
+    .append("svg")
+    .attr("preserveAspectRatio", "xMinYMin meet")
+    .attr("viewBox", "0 0 " + sidebar.offsetWidth + " " +  mainPanelHeight + "")
+    .classed("svg-content-responsive", true)
+
+//
+// Tooltip
+//
+var tooltip = d3.select("#plot")
+    .append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+//
+// Initialize d3.js
+//
+var forceProperties = {
+    size           : [mainPanelWidth, mainPanelHeight],
+    charge         : -1200,
+    chargeDistance : 500,
+    linkStrength   : 1.5,
+    linkDistance   : -40,
+    gravity        : 1.3,
+    friction       : 0.65,
+    alpha          : 2.0
+
+}
+
+var force = d3.layout.force()
+    .size(forceProperties.size)
+    .charge(forceProperties.charge)
+    .chargeDistance(forceProperties.chargeDistance)
+    .linkStrength(forceProperties.linkStrength)
+    .linkDistance(forceProperties.linkDistance)
+    .gravity(forceProperties.gravity)
+    .friction(forceProperties.friction)
+    .alpha(forceProperties.alpha);
+
+//
+// Update d3.js
+//
+function update(molecule) {
+
+    //
+    // Molecule Properties
+    //
+    var graph = convertMolecule(molecule);
+    var nodes = force.nodes(graph.nodes);
+    var links = force.links(graph.links);
+
+    d3.selectAll(".node").remove()
+    d3.selectAll(".separator").remove()
+
+    //
+    // Bond Properties
+    //
+    var bondMuliplier = 3;
+
+    var piBond = {
+        stroke: '#FFFFFF',
+        strokeWidth: '2px'
+    };
+
+    var aromaticBond = {
+        stroke: '#696969',
+        strokeWidth: '3px',
+        strokeDashArray: ("3,3")
+    };
+
+    var bond = mainPanel.selectAll("line.link")
+        .data(graph.links, function(d) { return d.source + "-" + d.target; } )
+        .enter();
+
+    var singleBond = bond.append("svg:line")
+        .filter(function (d) { return d.order == 1 | d.order == 2 | d.order == 3 })
+        .attr("class", "link")
+        .style("stroke-width", function(d) { return (d.order * bondMuliplier - 1) * (bondMuliplier/2) + "px"; })
+
+    var doubleBond = bond.append("svg:line")
+        .filter(function (d) { return d.order == 2 })
+        .attr("class", "separator")
+        .style("stroke-width", piBond.strokeWidth)
+        .style("stroke", piBond.stroke)
+
+    var aromaticBond_1 = bond.append("svg:line")
+        .filter(function (d) { return d.order == 1.5 })
+        .attr("class", "separator")
+        .style("stroke-width", aromaticBond.strokeWidth)
+        .style("stroke", aromaticBond.stroke)
+
+    var aromaticBond_2 = bond.append("svg:line")
+        .filter(function (d) { return d.order == 1.5 })
+        .attr("class", "link")
+        .style("stroke-width", aromaticBond.strokeWidth)
+        .style("stroke", aromaticBond.stroke)
+        .style("stroke-dasharray", aromaticBond.strokeDashArray)
+
+    var tripleBond_1 = bond.append("svg:line")
+        .filter(function (d) { return d.order == 3 })
+        .attr("class", "separator")
+        .style("stroke-width", piBond.strokeWidth)
+        .style("stroke", piBond.stroke)
+
+    var tripleBond_2 = bond.append("svg:line")
+        .filter(function (d) { return d.order == 3 })
+        .attr("class", "separator")
+        .style("stroke-width", piBond.strokeWidth)
+        .style("stroke", piBond.stroke)
+
+    mainPanel.selectAll("line.link")
+        .data(graph.links, function(d) { return d.source + "-" + d.target; } )
+        .exit().remove();
+
+    //
+    // Atom Properties
+    //
+    var maxProtons = 11;
+    var maxRadius = 10;
+    var minRadius = 2.7;
+    var atomMultiplier = 2.8;
+
+    var atom = mainPanel.selectAll("circle")
+        .data(graph.nodes, function(d) { return Math.random(); });
+
+    atom.enter()
+        .append("circle")
+        .attr("class", "node")
+        .attr("class", function(d) { return 'atom-' + d.name; })
+        .attr("r", function(d) { return (d.protons < maxProtons) ? (Math.sqrt(d.protons + minRadius) * atomMultiplier) : maxRadius; })
+        .call(force.drag)
+        .on("mouseover", function(d) {
+            tooltip.transition()
+                .delay(200)
+                .style("opacity", 0.9);
+            tooltip.html(getAtomText(d))
+                .style("left", d.x + 13 + "px")
+                .style("top", d.y - 20 +  "px"); })
+        .on("mouseout", function(d) {
+            tooltip.transition()
+            .duration(50)
+            .style("opacity", 0); });
+
+    atom.exit()
+        .remove();
+
+    //
+    // XY Coordinates
+    //
+    var atomRadius = 9;
+    var bondOffset = 2;
+
+    force.start();
+
+    force.on("tick", function () {
+
+        singleBond
+            .attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
+
+        doubleBond
+            .attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
+
+        aromaticBond_1
+            .attr("x1", function(d) { return d.source.x - xOffset(bondOffset, d.source, d.target) })
+            .attr("y1", function(d) { return d.source.y - yOffset(bondOffset, d.source, d.target) })
+            .attr("x2", function(d) { return d.target.x - xOffset(bondOffset, d.source, d.target) })
+            .attr("y2", function(d) { return d.target.y - yOffset(bondOffset, d.source, d.target) });
+
+        aromaticBond_2
+            .attr("x1", function(d) { return d.source.x - xOffset(-bondOffset, d.source, d.target) })
+            .attr("y1", function(d) { return d.source.y - yOffset(-bondOffset, d.source, d.target) })
+            .attr("x2", function(d) { return d.target.x - xOffset(-bondOffset, d.source, d.target) })
+            .attr("y2", function(d) { return d.target.y - yOffset(-bondOffset, d.source, d.target) });
+
+        tripleBond_1
+            .attr("x1", function(d) { return d.source.x - xOffset(bondOffset, d.source, d.target) })
+            .attr("y1", function(d) { return d.source.y - yOffset(bondOffset, d.source, d.target) })
+            .attr("x2", function(d) { return d.target.x - xOffset(bondOffset, d.source, d.target) })
+            .attr("y2", function(d) { return d.target.y - yOffset(bondOffset, d.source, d.target) });
+
+        tripleBond_2
+            .attr("x1", function(d) { return d.source.x - xOffset(-bondOffset, d.source, d.target) })
+            .attr("y1", function(d) { return d.source.y - yOffset(-bondOffset, d.source, d.target) })
+            .attr("x2", function(d) { return d.target.x - xOffset(-bondOffset, d.source, d.target) })
+            .attr("y2", function(d) { return d.target.y - yOffset(-bondOffset, d.source, d.target) });
+
+        atom
+            .attr("cx", function(d) { return d.x = Math.max(atomRadius, Math.min(mainPanelWidth - atomRadius, d.x)); })
+            .attr("cy", function(d) { return d.y = Math.max(atomRadius, Math.min(mainPanelHeight - atomRadius, d.y)); });
+
+    });
+
+    // Update text
+    if (typeof molecule === 'object') {
+        updateMolecularWeight(molecule);
+        updateMolecularFormula(molecule);
+    }
+
+}
+
+//
+// Helper Functions
+//
+function xOffset(offset, source, target) {
+    var dx = target.x - source.x;
+    var dy = target.y - source.y;
+    if (dy === 0 || Math.abs(dx/dy) > 1) { return offset * (dy/dx); }
+    else { return offset; }
+}
+
+function yOffset(offset, source, target) {
+    var dx = target.x - source.x;
+    var dy = target.y - source.y;
+    if (dy === 0 || Math.abs(dx/dy) > 1) { return -offset; }
+    else { return offset * -(dx/dy); }
+}
+
+//
+// Text Functions
+//
+function getAtomText(atom) {
+
+    var str = atom.name;
+    var x = atom.properties.charge;
+    var n = '';
+
+    if (x !== 0) {
+
+        if (x === 1) { n = '+'; }
+        else if ( x > 1 ) { n = x + '+' }
+        else if ( x === -1 ) { n = '-' }
+        else if ( x < -1 ) { n = x + '-' }
+
+        str = str.concat('<sup>' + n + '</sup>');
+    }
+
+    return str
+}
+
+function updateMolecularWeight(molecule) {
+
+    var decimalPoints = Math.pow(10, 2);
+    var molecularWeight = (Math.round(molecule.properties.mass * decimalPoints) / decimalPoints) + ' g/mol';
+
+    document.getElementById("molecularWeight").innerHTML = molecularWeight;
+}
+
+function updateMolecularFormula(molecule) {
+
+    var molecularFormula = [];
+    var atoms = Object.keys(molecule.properties.formula).sort();
+
+    var charge = 0;
+
+    Object.keys(molecule.atoms).forEach(function (key) {
+        charge += molecule.atoms[key].properties.charge;
+    });
+
+    function updateFormula(atomName) {
+        var atomCount = molecule.properties.formula[atomName];
+
+        if (atomCount === 1) { molecularFormula.push(atomName); }
+        else { molecularFormula.push(atomName + atomCount); }
+
+        atoms.splice(atoms.indexOf(atomName), 1);
+    }
+
+    if (atoms.indexOf('Li') !== -1) { updateFormula('Li'); }
+    if (atoms.indexOf('Na') !== -1) { updateFormula('Na'); }
+    if (atoms.indexOf('Mg') !== -1) { updateFormula('Mg'); }
+    if (atoms.indexOf('K') !== -1)  { updateFormula('K'); }
+    if (atoms.indexOf('Ca') !== -1) { updateFormula('Ca'); }
+
+    if (atoms.indexOf('C') !== -1) { updateFormula('C'); }
+    if (atoms.indexOf('H') !== -1) { updateFormula('H'); }
+
+    while (atoms.length > 0) { updateFormula(atoms[0]); }
+
+    molecularFormula = molecularFormula.join('').replace(/(\d+)/g, '<sub>$1</sub>');
+
+    // Append molecule charge
+    if (charge !== 0) {
+        var n = '';
+
+        if (charge === 1) { n = '+'; }
+        else if ( charge > 1 ) { n = charge + '+' }
+        else if ( charge === -1 ) { n = '-' }
+        else if ( charge < -1 ) { n = charge + '-' }
+
+        molecularFormula = molecularFormula.concat('<sup>' + n + '</sup>');
+    }
+
+    document.getElementById("molecularFormula").innerHTML = molecularFormula;
+
+}
+
+//function updateZoom(graph) {
+
+    //var zoom = d3.behavior.zoom();
+    //console.log(zoom);
+    ///main.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
+    //console.log(main);
+    //zoom.scale(4);
+    //main.call(zoom);
+//}
+
+//
+// Topology Functions
+//
+function getTopology(molecule) {
+
+    var adjacency = Molecules.topology.matrix.adjacency(molecule);
+    var distance = Molecules.topology.matrix.distance(adjacency);
+
+    return {
+        adjacent: adjacency,
+        distance: distance
+    };
+}
+
+function formatMatrix(input) {
+
+    var output = [];
+
+    for (var i = 0; i < input.length; i++) {
+        output[i] = [];
+
+        for (var j = 0; j < input[0].length; j++) {
+            output[i][j] = { x: j, y: i, z: input[i][j] };
+        }
+    }
+
+    return output;
+ }
+
+function updateMatrix(input) {
+
+    var matrix = document.getElementById("matrix");
+    var height = footer.offsetTop - 10 - header.offsetHeight;
+    var width = matrix.offsetWidth;
+    var distance = formatMatrix(input.distance);
+
+    support.append("rect")
+        .attr("class", "background")
+        .attr("width", width * 2)
+        .attr("height", height)
+        .attr("x", width*2);
+
+    var x = d3.scale.ordinal().rangeBands([0, width*0.85]);
+    var z = d3.scale.linear().domain([0, distance.length]).clamp(true);
+    var c = d3.scale.linear().range(["red", "steelblue"]).interpolate(d3.interpolateHcl);
+
+    c.domain(d3.range(distance.length));
+    x.domain(d3.range(input.header.length));
+
+    var row = support.selectAll(".row")
+        .data(distance)
+        .enter().append("g")
+        .attr("class", "row")
+        .attr("transform", function(d, i) { return "translate(" + (width * 0.1) + "," + (x(i) + height * 0.1) + ")"; })
+        .each(row);
+
+    row.append("line")
+        .attr("x2", -width);
+
+    row.append("text")
+        .attr("x", (x.rangeBand() / 2) - (x.rangeBand()/1.5))
+        .attr("y", x.rangeBand() / 2)
+        .attr("dy", ".32em")
+        .attr("text-anchor", "end")
+        .text(function(d, i) { return input.header[i]; });
+
+    var column = support.selectAll(".column")
+        .data(distance)
+        .enter().append("g")
+        .attr("class", "column")
+        .attr("transform", function(d, i) { return "translate(" + x(i) + ")rotate(0)"; });
+
+    column.append("line")
+        .attr("x1", -width);
+
+    column.append("text")
+        .attr("x", x.rangeBand())
+        .attr("y", (x.rangeBand() / 1.5))
+        .attr("dy", ".32em")
+        .attr("text-anchor", "start")
+        .text(function(d, i) { return input.header[i]; });
+
+    function row(row) {
+
+        var cell = d3.select(this).selectAll(".cell")
+            .data(row.filter(function(d) { return d.z; }))
+            .enter().append("rect")
+            .attr("class", "cell")
+            .attr("x", function(d) { return x(d.x); })
+            .attr("width", x.rangeBand()*0.97)
+            .attr("height", x.rangeBand()*0.97)
+            .style("fill-opacity", function(d) { return z(d.z)+0.4; })
+            .style("fill", function(d) { return c(d.z-1); });
+    }
+}
+
+//
+// Initialization
+//
+parseInput(userExample);
+
+//
+// SMILES Examples
+//
+var randomMolecule = [
+'CC1C2CN2CC1C#N',
+'CCC1(O)C2CC1C2O',
+'C1NC11C=CCN2CC12',
+'COC1C2NC(C=O)C12',
+'CC12CC(C1)(OC2)C=O',
+'CC1CNC(=O)N1C=O',
+'CC12C3CN4C(CN13)C24',
+'CC1CC11COC(C)=N1',
+'OCCC1(O)CCC=C1',
+'CC12CC=CC1(N2)C#C',
+'CC1C2CC1(C#C)C2=O',
+'CC1CC2CC1(C2)C=O',
+'CC1OC2CCC1C2',
+'CN(C)C1=CC(C)=CN1',
+'O=CC12COC3CN1C23',
+'O=C1CCC(=O)NC1',
+'CC12CC(=O)C=CC1O2',
+'NC1=NNC2=C1N=CN2',
+'CCNC1=COC=N1',
+'C#CC12CC(C1)(N2)C#N',
+'N=C1OC2C1COC2=O',
+'CCC12CC1CCC2C',
+'CC(=O)C1=NC(O)=NO1',
+'COC1(CO)CC1O',
+'NC1C(O)C2NC12C#N',
+'CC1(O)CC1OC(N)=O',
+'CCOC1(CC1)C1CC1',
+'CC(CO)(OC=O)C=O',
+'N=C1OC(=O)C=CN=C1',
+'CCC1=CN=C(CO)O1',
+'COC1(CC1(C)C)C#C',
+'O=CC1=CCC2OC12',
+'CC(=O)C(CCO)C#C',
+'COC1=NNC(=C1)C#C',
+'CCCC(NC=O)C=O',
+'CN1C(C=O)C(O)C1=O',
+'CC(O)C1CN1C(C)=O',
+'NC(=O)C(CO)CC#C',
+'CC1NC1(CO)CO',
+'CC1=C2CC3C(C1)C23',
+'CCC1CCOC1C#N',
+'N=COCC1CCOC1',
+'C1CC2C3CC(C3)OC12',
+'CC1C2C(O)C(C)(C)N12',
+'O=CC1COCCN1',
+'C#CC12C3CC4C(C14)C23',
+'CCC(=O)C1(O)CC1O',
+'OCC1OC(=N)C2CC12',
+'CC(=NO)C12CC1CO2',
+'CCC1NC(=O)NC1C',
+'CC1OCC2OC2C1O',
+'CC1CC2(C)COC12C',
+'NC(=O)C1(O)CC1C#N',
+'COC(C=O)C1CC1O',
+'COC12CC1(NC2)C=O',
+'CC12CCCC1C2C#N',
+'O=CCC12CC(C1)OC2',
+'CCC1(C)C(C)OC1C',
+'COC1OC(=N)C2CC12',
+'COC1CC2CC2C1O',
+'CC1=CNC2=NN=CN12',
+'CC12CN3CC1C23C',
+'CC(O)CCC1(O)CC1',
+'O=C1CC2CN=CN12',
+'C1C2CC3OC3CN12',
+'COCC12CC1CO2',
+'CC1=NCC(OC=N)O1',
+'NC1C(O)C(=O)NC1=N',
+'CNC1=CC(=O)N=NN1',
+'CC1(C)C2CC1(O)CC2',
+'OCC1CN=CNC1=O',
+'CC1C=CCC(O)C=C1',
+'CN1N=C(N)C(C)=C1N',
+'O=CC1COC(C1)C#C',
+'NC1=NC2=C(O1)C=NO2',
+'CC1C(CC1(C)O)C#N',
+'OC1=CC(OC=O)=CN1',
+'NC1=CC(=N)C(F)=CO1',
+'C1C2OC3C4C3C2C14',
+'CC1C2NC2C(=O)C1=O',
+'COC=NC1CC2NC12',
+'CC12CC1(CO)OCO2',
+'CC1=NON=C1C(N)=O',
+'CC1(CC=CCO1)C=O',
+'O=CNC1CC1OC=O',
+'CCC12NC1(C)C1NC21',
+'CC(C)(CO)CCC=O',
+'CCC1=NOC(=O)C=N1',
+'CC1C(C)C11NCC1=O',
+'CC1(OC1C#N)C1CO1',
+'C1CC2C3C4C(O1)C2N34',
+'COC1C2CC1C(=O)N2',
+'NC1=CN=C(F)N=C1F',
+'CN1C=C(N)C(C=O)=N1',
+'CC1=C(N)N=C(N1)C#C',
+'COC1=C(O)NC=C1O',
+'OC1CCN(CC=O)C1',
+'OCC1=CN=NN1',
+'N#CCC1CC2NC12',
+'OC1CC11COC(=O)C1',
+'CC(C)C(O)C#CC#C',
+'CCOC1=CNN=C1N',
+'CC(C)(O)C1NC1C#C',
+'O=CC(=O)C1CCO1',
+'NC12CC(C1)OC2C#N',
+'FC1=NC=CC=C1C=O',
+'CCN=C1OCCC1O',
+'CC12COC1CC2C=O',
+'OCCNC(=[NH2+])C([O-])=O',
+'CC1=CN=C(O)O1',
+'O=CC1=NNC(=O)N1',
+'CC1=CC=CC=C1CO',
+'OC12CC3C1OC23C=O',
+'O=C1C2C=CC11OCC21',
+'CC1OCC2OC12C',
+'CC1=CC2C3C=CC1C23',
+'CCC1(NC2CC12)C#N',
+'CC(=O)C#CCOC=O',
+'NC1=CN=C(N)C(=O)N1',
+'CC(C)OC1=NCCN1',
+'CCCC(CO)C(C)C',
+'OC12C3OC1C1(CC1)C23',
+'CC12OC1C(C)(C)C2O',
+'CC1CCN1C(N)=O',
+'CC1OCC2(CC12)C#N',
+'CC1CC23CC(C2)C13O',
+'CC1COC(=N)OC1C',
+'COC(=O)CC#CCO',
+'OCC(=O)C1=NC=CO1',
+'CCC1(C)OC1CCO',
+'CC1(C2C[NH+]1C2)C([O-])=O',
+'O=C1C2CC=CC1CO2',
+'O=C1C=CC2NC12',
+'CC(C)CC1=CON=C1',
+'COC1(C)COC1C=O',
+'NC1=CNC=C1C1CN1',
+'NC(=[NH2+])[C-](O)C(=O)C#N',
+'OC(C=O)C1(CN1)C#N',
+'CN=C1OC(CO)C1O',
+'C1CC11CCCCC=C1',
+'CC1=CC=CC2NC2C1',
+'CC1=CC(C)(C)CC1',
+'O=CC1C2C3C1C2C3=O',
+'O=CNCCOCC#N',
+'O=C1NCC11C2CCC12',
+'O=C1NCC2OCC2O1',
+'CCOCC1CCC=C1',
+'OC1CC1(O)CCC#N',
+'N#CC1CC2=CC=NN12',
+'CC(C)(C)C1CC=CC1',
+'O=COC1(CNC1)C#N',
+'CC1=CC(CC1)=NO',
+'CC(=O)C1=CCC(O)C1',
+'OCC1CC1C#C',
+'CC#CC1CN1CC=O',
+'CC12OC1C1C=CCC21',
+'C#CCC12CC1C=CC2',
+'CC(=O)COCCO',
+'N=C1OCC2OC12',
+'CC(C#C)C(C#C)C#C',
+'CC12C3C1C1C3CCC21',
+'C1OC2C3C4CCC12N34',
+'OCCCC1CC(=O)O1',
+'CN1CC1C(=O)CC#N',
+'O=CCCC12CC1CC2',
+'CC1(OCCO1)C(N)=O',
+'CC1=CCC2COC1C2',
+'CC1CCOC(=O)C1=O',
+'OC1(CC2CC1O2)C#C',
+'CC(O)CN1N=NN=N1',
+'CC(O)C1C2CC(C)C12',
+'C1CC11CC2CC2CO1',
+'OCC1CC(O)(CO)C1',
+'NC1C2N=CNC=NC12',
+'CCC1(OC1C)C1CN1',
+'CN1C2COC(=N)CC12',
+'CC1(COCCO1)C#N',
+'O=CC12NC3C1COC23',
+'O=C1CC=CCC2NC12',
+'N=C1OC(=O)CC1C=O',
+'O=C1COC1C1COC1',
+'OC1CN=CNC1C#N',
+'NC(=O)C1=CNN=C1N',
+'CC1OCC(O)C1(C)C',
+'CCN(CCO)C=O',
+'CC(O)C1(C)CC2CN12',
+'CC(C)(O)C#CC=O',
+'O=CC12NC1CC1CC21',
+'CN1C2C3CC3C12C',
+'CC1=NNC=C1C(N)=O',
+'COCC(=O)CO',
+'OC1CC2(NC12)C1CN1',
+'NC1=C(O)C(=NN1)C#N',
+'CC12OC1(CC2O)C#N',
+'OC12CC3OC1COC23',
+'CC1NC11C=CC2OC12',
+'C1OC23COCC2NC13',
+'OC12CN3CC1C23',
+'COC1=C(C)OC(C)=C1',
+'CC1CC2(CCO2)CO1',
+'CC1OC(=O)C2NCC12',
+'OCC12CC=CCC1O2',
+'CCC12NC1C1OCC21',
+'C1CC11CN2C=CN=C12',
+'O=CC1CC2CCC2=C1',
+'OCC12CC1NC2C#N',
+'CCOCC1=NON=N1',
+'CC1=NC2=NOC=C2O1',
+'CC1CC2(CC12)C#N',
+'C#CC1OCCN2CC12',
+'CC1CC2(O1)C1COC21',
+'COC1(COC1)C(C)=O',
+'CCOC1CCC1=NO',
+'COC12CCC1OC2=O',
+'OC1C2CC1C2O',
+'CCOC(C)C(O)C#C',
+'O=C1NC2=C(O1)C=CN2',
+'CN1CC1(C)C(C)=NO',
+'CC#CC(CC#C)=NO',
+'CC1=CCCC1(O)C#N',
+'CC1COC1(CO)C=O',
+'CCC1=CN=C(C)N=N1',
+'CN1CC2CC(C2)C1=O',
+'OC1CC2C1N2CC=O',
+'O=C1NCC2OC=NC12',
+'CC1NC1C1(O)CC1O',
+'O=CCNC(C#C)C#C',
+'C1OC11C2NC2C2OC12',
+'CCOC1CC1CC=O',
+'CC12CC1OCO2',
+'CC12CCN3CC(O1)C23',
+'NC12CC1C(=O)OC2=N',
+'C1C=CCC2OC2C=C1',
+'C1C2CC3(OCC=C3)C12',
+'OCC1(CO)C2CCC12',
+'CC1CC2(O)C1OC2=O',
+'OC1C2NC2C2CC1C2',
+'OC1=CC=CN=C1C#N',
+'CC1C2(O)C3CN3C12C',
+'CN1N=C2NC=NC2=N1',
+'C1C2CC3=C(NC=C3)N12',
+'O=CC12C3CN1CCC23',
+'CN1C=C(N=N1)C1CN1',
+'CC1CC2(O)C(CO)C12',
+'CCC#CC(=O)C(C)C',
+'O=C(CCC#C)C1CO1',
+'CCC(C)C(=O)CC#N',
+'CCN(C)C(=O)C#CC',
+'CCC1(CNC=O)CO1',
+'NC1=C(O)C(=O)N=CN1',
+'NC1=CN=CC=CC1=O',
+'OCC12CCC1C2C=O',
+'O=C1CCCC(N1)C#C',
+'NC1=NN2CCC2=C1',
+'CC1C2CC(C)C(O)C12',
+'OC1CC2=CCCC2=C1',
+'O=CC(CC#C)C#C',
+'CC(O)CC(C)C(C)C',
+'O=CC1C=CCC11CC1',
+'N=C1OC2CC(=O)CC12',
+'O=CC12CC(C1)C2',
+'CC12CCC3C1OC23C',
+'OCC1CCCCCC1',
+'CCN1C2C3NC2(C)C13',
+'CCC(N)(C#C)C#N',
+'O=CCOC1=CC=NN1',
+'CCC12OC1CCC2O',
+'CC1(C)CC(=O)C2OC12',
+'N#CC1C2NC1C1CC21',
+'C#CC1CC2NC2CO1',
+'CCN1N=C(N)N=C1N',
+'CC(C)C1CC(O)C1C',
+'CCC(=O)C#CC(C)=O',
+'OCC1=CC=C(O1)C=O',
+'CN1C(=N)NN=CC1=O',
+'OCC12OC3CC1C23O',
+'CC12CCC3(CCC13)O2',
+'N#CC12CC1C1CCC21',
+'NC1=CC2=C(O1)N=CO2',
+'CC(O)(C#N)C#CC#C',
+'OCC(O)(C=O)C1CC1',
+'CC12C(O)C3N1CC23O',
+'CC1CCCOCO1',
+'ON=C1C2NC2C11CO1',
+'CC#CC1(NC1C)C#C',
+'C1NC1C1COC=N1',
+'CC1CC11CCC1=NO',
+'O=C1OCC2C3CN3C12',
+'O=C1NC=NC11CC1',
+'C1OC2C3C4CN(C34)C12',
+'OCCC(OC=N)C=O',
+'COC1CC=CC1=O',
+'OCCC1OCCC1O',
+'OC1=NNC(=C1)C1CC1',
+'CC1(O)C2C3CC2C13O',
+'CC1C23CCC12CCC3',
+'COCC12COCC1N2',
+'CC12CC1C1CC1C2O',
+'CC12C3CC4(O)C(C13)C24',
+'OC12CC3(C1)NC(=O)C23',
+'CC1(O)C2CC2NC1=O',
+'CC1=C(COC1=O)C#N',
+'OC1C2CC3C(C2)C13O',
+'CCNC1=C(C)C=NN1',
+'CC1=CC2C3CC2C1C3',
+'C1CC23C=CC4C(C12)N34',
+'OCC1=CC(=O)NN=N1',
+'O=C1CC2CC=CC1N2',
+'CCC1(O)C2CCC12',
+'OC12CC1(CC#N)NC2',
+'OCC1CC(CO)C1',
+'OCC1CC(=O)C11CN1',
+'NC1=CN=CC(=O)N=C1',
+'CCC1=NON=C1C',
+'CC1(CC1)C1=NCCO1',
+'C1COC2(C1)CC=CC2',
+'CC12C3C(CN13)C21CO1',
+'C1C2CC3COC3CC12',
+'CC1(C)CC2(C)CCC12',
+'COC1=CC=NO1',
+'C1CC2(CO1)CC=CC2',
+'OC1(CC=O)CC1C#C',
+'CC1CC2C(O)C12CO',
+'CC(C)(OC=N)C#N',
+'CC12CC(C1)C(O)CC2',
+'N=C1NC(=O)N=CC=C1',
+'N=C1NCC2OC1C2=O',
+'OCCN1N=CC=C1O',
+'CC1CCC2(NC12)C#N',
+'N#CCN=C1CN=CN1',
+'CC1C=CC(C=O)C1C',
+'CCN1CC(O)(C1)C=O',
+'C#CCC1=NC=NC=N1',
+'CNC(=O)CN1CCC1',
+'CC12CC1C1(O)CC1C2',
+'O=CC12CC(C1)C(=O)O2',
+'CCC1=CC2CC1O2',
+'COCCCC#C',
+'CC#CC(=O)CC#C',
+'CC12CCC3OC3C1N2',
+'C#CCN1CC1C#C',
+'CC1(C)COC2CC12',
+'CN1CC(C1)OC=N',
+'CN=C1CC=C(C)CO1',
+'CC(O)C1=CON=N1',
+'C1CC2OCC=CCC12',
+'COC1CC(O)C1(C)C',
+'CC1CC(O)C1(C)O',
+'COC1CC1CC=O',
+'C1CC11C2CC1CCC2',
+'CCC(=O)N1C=CN=C1',
+'N#CCCN1C=CN=N1',
+'C1OC2C3CC1C2CO3',
+'OC1C2CCCC=CC12',
+'CC1CC=CC11CC1',
+'O=CCC1(CCO1)C#N',
+'CC(O)C1=CCCC1C',
+'C#CC12CN3CC(O1)C23',
+'CCC(=N)NC=O',
+'C1C2OC3OCC2OC13',
+'OC1COC1CC#C',
+'CC12CC1N1CC1C2=O',
+'NC1=NC(CO)CC1=O',
+'CC1N2C3CC1(C)C23',
+'COC1=CC(=N)N=NN1',
+'NC1=NON=C1C#C',
+'CN=C1CC(C)(O)CO1',
+'O=CC12OC1C1OC21',
+'N=C1OCC2=C1CCN2',
+'O=C1NCC(=O)C=CN1',
+'CN1C=C2CC=CC2=N1',
+'CCCC1CC2(O)CC12',
+'CN1C2C(O)C1C21CO1',
+'CC1CC=CC1=NO',
+'CC1(C)OC(=O)C=C1',
+'NC=NC1=NC=C(N)O1',
+'CC1(NCCC1N)C#N',
+'O=CNCC1CCC1',
+'CC1=CCC(CO)OC1',
+'N=C1OCC2OC12C=O',
+'OC1CN(CC=O)C1=N',
+'C1C=CCC2=NNC=C12',
+'C[NH2+]C(C)(C)CC([O-])=O',
+'CC1C2C3NC3(CO)C12',
+'O=C1C2CCC1(N2)C#N',
+'OC12C3CC(C13)C2C#N',
+'CC1=C(COCC1)C=O',
+'CCCC1(C)OC1C#C',
+'O=CC1C2CC1(N2)C=O',
+'CC1C2C(C)N1CC2=O',
+'CC(=O)N1C=CC=N1',
+'NC1=N[N-]C(=[NH2+])N=C1N',
+'CC(O)C1=C(N)ON=N1',
+'C1OC23C4CC2OC13C4',
+'CC1OC2C1C=CC2C',
+'O=C1NC=NCC2OC12',
+'CNC(C#N)C#CC=O',
+'CC1(CCO)OC1C=O',
+'OCC1NC(=O)C=C1',
+'CNC1=NC=CN=C1F',
+'CC1(O)CC=CC1(C)O',
+'OC12CNC1C(=O)NC2',
+'CC(C)OC(C#C)C#N',
+'CCCCCN1CC1C',
+'CC1=CC2C3C(O)C1N23',
+'OCC12C3C1N1CC2C31',
+'CC1(O)C(O)C2COC12',
+'CCC1C2OC2C1(C)C',
+'OC12C=CCC1C1NC21',
+'CC12CC=C3C4C1N4C23',
+'CC1=CC2OC2CC1',
+'O=C1CCC2(CC2)OC1',
+'COC(=N)CC(=O)OC',
+'OCC(=O)N1CC(=O)C1',
+'CC1NC1(CCO)C#N',
+'CC1=CC(=NN1)C(N)=O',
+'CC12CCN1CC2=O',
+'CC1(N)C2CC1(N2)C#N',
+'NC1(CC1C1CN1)C#N',
+'CC12CC1(N)C(=N)O2',
+'CC1C2C(C)C(=O)C12C',
+'N#CC12CC(N1)C=CC2',
+'CC(=O)C(O)(C#C)C#C',
+'FC1=C(F)C(=N)ON=N1',
+'COC(C)(C)CC(C)=O',
+'CC1OC2C(CC12)C=O',
+'FC1=NC=NOC1=N',
+'CNC1=COC(=O)N1',
+'CC1CC1CCC(N)=O',
+'CC(C)(O)CC#CC#N',
+'CC(C)OC12CC1OC2',
+'CCC1(O)CC(=O)C1',
+'O=C1C=CC2(OC12)C#C',
+'CC1C2N1C(C)C21CO1',
+'O=C1NC=CCOC1=O',
+'CN(C)C(=O)CCC=O',
+'CC1=CON=C1N1CC1',
+'CN(C=N)C1=CN=CO1',
+'COC(C=O)C1CCC1',
+'CC1=NCCC(=O)CO1',
+'NC1=C(N)C(=O)NC1=O',
+'CC1CCC1C(=O)C=O',
+'CC12C(CO)C1CC2O',
+'OCC12CC3C4C(C14)C23',
+'O=CC(=O)CC#CC#N',
+'CC1=NCC2(CN2)CO1',
+'CC1=COC(=N)N=C1O',
+'CC12COC(=O)C1C2O',
+'CC(=O)C1=NCCN1',
+'CC1(CC1)C1(CC1)C=O',
+'CC1=CCCC2C(O)C12',
+'CC(C)C12CN1CC2=O',
+'CC1C2CC1(CO)C2',
+'NC1=C2NCCN2N=N1',
+'C1C2C3OC2C13',
+'CC1(CO)OCCC=C1',
+'CCC1(C)CC1CC#N',
+'O=CC1=CCC2(CC2)C1',
+'NC1=NC(F)=COC1=N',
+'C#CC1C2CCCN12',
+'N=C1OCC2=C1C=CN2',
+'FC1=COC(=O)C=C1',
+'CCC(CC)CCC#N',
+'CC1N2CC2C1=O',
+'CCCN=C1OC2CC12',
+'OC1(CC1)C1CCCO1',
+'C#CCCN1C=CN=C1',
+'CC1OC11COCC1=O',
+'NC1=NC(=CN=C1)C#C',
+'CCC1=NOC=C1C=O',
+'C1C2OC3C4OC3C2C14',
+'CCC(=O)C1C2CCN12',
+'CC(C)CC(C)(C)CO',
+'CCC1=CC2CC1C2=O',
+'C#CC1COC(O1)C#N',
+'OC1COC(OC1)C#N',
+'CC1(O)CNC(=O)C1',
+'COCC1(N)CC1C#N',
+'CC1COC2C(O)C2O1',
+'CN1CC1CC#CCO',
+'C1C2OC11COC3C2C13',
+'OC1CC(O)(C=O)C1=O',
+'CC12CC1C(C#C)C2O',
+'CC12COC=NC1CO2',
+'C1CC1C1CC2OCC12',
+'CCN1N=NC(=N1)C#N',
+'N#CC#CCOC1CC1',
+'CCOC(=O)C1CC1C',
+'CC1(C)CCOCCO1',
+'COC12CC1(CO)OC2',
+'CCC(=O)C(=N)N1CC1',
+'C1OC11CN2CC=CC12',
+'CC1=COC2=C1C=CN2',
+'CC#CC(C)(C)NC=O',
+'CC1(C)C2CCOCC12',
+'C#CC1CC2CN12',
+'CC1CCC2(O)CC2C1',
+'OC1CC2(COC12)C#N',
+'OCC1(CN2CC2)CO1',
+'CC1(C)CNC(C1)C#N',
+'OCCC1COC2CC12',
+'CC1(CC1C=O)C1CC1',
+'OCC1=NOC=CC1=N',
+'NC1=CNC(=N1)C#N',
+'OC1CNC2=C1NC=C2',
+'COC(C)C1CC2CC12',
+'CCN(C)C=O',
+'O=C(C#N)C1CC=CC1',
+'CC(N)(C#N)C(N)C#N',
+'OCC1(C#N)C2COC12',
+'CC12CC(CC1N2)C#N',
+'CCN1C=CC(=N)N=N1',
+'CC1=CNC=C1C',
+'CC1NC(=O)CC=C1C',
+'C[NH2+]CC1=NOC(=N)[N-]1',
+'O=CC1C2NC2C2NC12',
+'CCC12OC1C1NC21',
+'COC1C(O)C2CCC12',
+'O=CC1(CCC#N)CN1',
+'C#CC12C3C4CC1N2C34',
+'NC1=NC(F)=NOC1=N',
+'COC1CCOCC1C',
+'C#CC1C2N1CC21CN1',
+'CC(O)C1OC2CC1C2',
+'CCC1C2C3OC3C12O',
+'C1C2CCC3OC3CN12',
+'O=C1NC=CC=CC1=O',
+'NC1=NON=NC1=N',
+'N=C1OCC(=C1)N1CC1',
+'OCC12COC(CO1)C2',
+'O=C1NCC1OCC#C',
+'C1OC1C12CC(CC1)O2',
+'CC1CN2CC2C(=O)C1',
+'CC1C2C=C(C)C(=O)N12',
+'OC(C=O)C(C#C)C#C',
+'N=C1OC2COC(=N)C12',
+'NC(=O)NC(=O)CCO',
+'CC1(C)OC2C3OC1C23',
+'CC12OC3CC1(C#N)C23',
+'NC(=O)CC(C=O)C#N',
+'N=COCC1=CN=CO1',
+'O=CC1=NON=CC1=O',
+'COC1=NNC=C1C=O',
+'CC1(C)OC(=N)C1C=O',
+'N#CC12CC3C(O1)C3O2',
+'CN1C=C(O)C(CO)=C1',
+'OC1C2C=CCN2C1=O',
+'COC12CC(C1)OC2C',
+'CC(C)OC(C=O)C#N',
+'N#CCCC1=NNC=C1',
+'O=C1ON=CC(=O)N=C1',
+'CC(C)C1CC(O)C=C1',
+'CC(OC=N)(C#N)C#N',
+'O=C1OC2C3NC3CC12',
+'CC1CC2C=C(C)CC12',
+'OCC1NC2(CC2)C1=O',
+'CCC#CC1C2CC1O2',
+'CCC12CC(CO1)C=C2',
+'CNC(=O)CCC(C)O',
+'CNC1=NC=NC(F)=C1',
+'CCOC1(CC#C)CC1',
+'OC12CC(O)(C1)C=C2',
+'CC1N2C3CC3C12C#N',
+'CC1CC=CCC(O)C1',
+'N#CCC1CN2CC12',
+'OCCC1CCO1',
+'CC1CC1C(C=O)C#C',
+'C1CC23NC2C=CCC13',
+'CC#CC1C(C)C1(C)O',
+'CC(O)C(C)N(C)C=O',
+'CC(C)COC1CCC1',
+'CC(=O)CCCCCO',
+'CC(=O)N1N=NC(O)=N1',
+'NC1=CC=C(F)C(N)=N1',
+'CC12CN3C1C1OC1C23',
+'O=COC1CCCOC1',
+'CC1(C)OC2CCOC12',
+'O=CC1=CC(=O)NC1=O',
+'CCOCC(C)=O',
+'OC12CC1OC(=O)C2',
+'COC12CC1NC2C#C',
+'CC1OC2C3OCC3C12',
+'CC(C)C1(CN1C)C#C',
+'OC1C2CC3C2C(=O)C13',
+'C1C2CC11OCOC1C2',
+'OCC1C2CC2(O)C1=O',
+'O=CC1NC1CC#C',
+'CC1C2CC3(O)CC1C23',
+'CC1=CCC(O)C1',
+'CC(C)(CNC=O)C#C',
+'CC(C)C1CC11COC1',
+'N1N=NC2=C1N=CN=C2',
+'CCN1CC1(C)COC',
+'CN1N=NOC(=O)C1=O',
+'CC12CC1C1NC21C=O',
+'CC1CN1CCN1CC1',
+'O=CC12COC1COC2',
+'OCC1(CO)OCC=C1',
+'CN=COC1CC(=O)C1',
+'CC1C2OC3C1C2C3=O',
+'CC1CC1(O)C(C)(C)C',
+'OC1=NNC2=C1C=NN2',
+'OCC1(CN=CN1)C#C',
+'CN1CC2(O)C1C2(C)O',
+'O=CC12C3CC1=CCC23',
+'OC1C=CC(O)C2NC12',
+'CC1(C)OC2(CO)CC12',
+'CC12OCC3OC1C2O3',
+'CN1C(=O)CCCC1=O',
+'CC1=NN2CCOC2=N1',
+'OC(C#C)(C#C)CC#N',
+'CCC(=O)C1=CC=CN1',
+'O=N(=O)C1=COC=C1',
+'N=C1C=NNC(=N)N=C1',
+'CC12CC(=O)CCC1N2',
+'OCC12CC1C1CCC21',
+'OCC(O)C(CO)C#C',
+'N=CNC(=O)C#CC=O',
+'O=C1C=CC2=CC=CN12',
+'CN1CC11COCC1O',
+'CC1=CN(N=N1)C1CC1',
+'CC1NC(=O)C2(C)CC12',
+'O=CNC1COC11CC1',
+'C#CC1C2C3C4C3N1C24',
+'ON=C1C(O)COC1=O',
+'COC1COC2CC2C1',
+'CN1C=C(C)N=N1',
+'OC1CC2=C(CCC2)C1',
+'C1OC2C3NC3CNC12',
+'COC1C(O)C1CO',
+'CC1CC2OC12CO',
+'CCN1C=C(C)C(N)=C1',
+'OCCN1C=C(O)C=N1',
+'C1NC2C3CC12OC=N3',
+'NC1=NOC=CC1=N',
+'C#CC12CCC1CCO2',
+'CC(CO)N=C(N)C#N',
+'OC12CC(C=C1)C21CN1',
+'NC1=CC(O)=NC=C1',
+'CC(O)C12CC1OC2=O',
+'O=CCC1CCCC1',
+'O=C(CC1CC1)N1CC1',
+'C#CCC1OC1C1CO1',
+'OCC1=CN=CC=C1O',
+'OC12C3CC1C1C3OC21',
+'O=CN1C2CCC12C=O',
+'C1NC11C2COCC1N2',
+'N1C=C2N=CC=NC2=N1',
+'C1CC2OC1CCC=C2',
+'COC1CC(=O)CC1O',
+'CC(N)(CO)C(O)C#N',
+'OC1C2CC1(O)C2C=O',
+'C1COCCOCCO1',
+'OCCC1=CCOC1=O',
+'CN1C=NC(O)=C1C#C',
+'C1C2OC3=NCCNC123',
+'O=C1CC2OC2C11CO1',
+'CC1(O)CC(=N)NC1=O',
+'NC1=CC(N)=C(N1)C=O',
+'CCC(CC#N)C#C',
+'CC(C#N)C1=COC=N1',
+'OCC12CC3C1CC23O',
+'CC12CC1(O)C(C)(C)O2',
+'C1NC11C2C3C2N2C3C12',
+'CNC1=C(O)OC(C)=C1',
+'CNC(=O)NC(C)(C)C',
+'NC(CC#N)CN1CC1',
+'C1CC23NC12CC1OC31',
+'N=C1OCC11CC1C=O',
+'CCOCC#CC#N',
+'C1CC2=C(ON=C2)C=C1',
+'CC12OCC3CC1OC23',
+'CN1C=CC=C1C#C',
+'CCC1=NC=CC(C)=N1',
+'CC(C)N1CC1C#C',
+'CC(O)C(NC=O)C=O',
+'CC1(CO)CN1CCO',
+'OCCC(O)C1CC1O',
+'C1CC2=CCCC12',
+'N=C1OCCC2OC12',
+'CC(OC(=O)CN)C#N',
+'CC1(O)CC2OC2C1',
+'OCCC12C3CC1OC23',
+'CC(=O)N1CC2(C)CC12',
+'OCCOC(=O)CO',
+'CC1OC2CC3(CN3)C12',
+'CCOC(CO)C(C)=O',
+'CC1=NC(OC=O)=CO1',
+'CC12CC(O)C1N2C=O',
+'CN1CC1CCNC=O',
+'OCC(CC=O)C#C',
+'OCC1=CCC(=O)N1',
+'CCC1=CCCC2OC12',
+'CCC1CC11CC(C)O1',
+'CC#CC(CO)C(C)=O',
+'CC(C)(O)CCOC=O',
+'COC1OCC2(C)NC12',
+'CCC(O)CC1COC1',
+'OC12CC1C(=O)C1CC21',
+'N=C1OC(C#C)C2OC12',
+'CC(C)(O)C1C2CC1C2',
+'CC1C2OCC(C)C12O',
+'CC(=O)C1=CC=NC=C1',
+'C1CC1C1CC2OC12',
+'COC(C#N)C(=O)OC',
+'CN1CC(=O)CNC1=O',
+'O=CCN1C2COCC12',
+'OCC1=CC(O)CC1=O',
+'O=CCCC1C2CCN12',
+'OC1C(=O)C(O)C11CC1',
+'CC1C(C)C(C#N)C1O',
+'NC1=CC=C(O)N1',
+'CC(C)C1=COC=C1N',
+'OC1CCC2C1NC2=O',
+'CC12CN=C3NC1C23O',
+'NC1=CC(O)=CN1C=O',
+'CC1=CC(=O)CC1C#N',
+'OCC1=CC(=O)OC1=N',
+'OC1C2CCC(C#N)C12',
+'CC1CCC1OC=O',
+'C1OC2CC3OCCC123',
+'CC(CC1CC1C)C#N',
+'CC(O)(CC1CN1)C#C',
+'CCC1C2CC3CC1C23',
+'CC12CC(CO1)C2=NO',
+'O=C1CCC=CCCO1',
+'CC#CC(CO)C(C)O',
+'C1=NC2C3N=CN1C23',
+'CC12CC1CC=C2CO',
+'CC#CC1OCC11CC1',
+'N#CCC1=CN=CO1',
+'O=C1COC2OC1C=C2',
+'CC(C=O)C12CC1OC2',
+'O=COCC12CC1CO2',
+'CC1NC11C2OC2C1O',
+'CC12CC3(O)C(CO1)C23',
+'CC1CC1C1(CO1)C#N',
+'COC12CN3C=NC1C23',
+'CC1CC(C)(C)CC=C1',
+'OCC12C3C1C1OC3C21',
+'C#CC12OC3CCC1C23',
+'CC(=O)C1OC2CC2O1',
+'NC1=NC2C(O)C2OC1',
+'O=CN1N=NC=C1C#N',
+'CN1C2(C)CC1(C)C2=O',
+'CC12CC3CC1C23C=O',
+'O=CC(=O)C(=O)C#N',
+'CCC1=CN(C)C=N1',
+'CCC(O)C1OCCO1',
+'O=CCC1(CO1)C=O',
+'CC1=C(N)N=NNC1=N',
+'C#CC1=NC(=CN1)C#N',
+'COC1(C)CC=CC1=O',
+'CCC1=NC(=O)OC=N1',
+'COCC(O)(CO)C#C',
+'CC12C3C4C3N(C14)C2=O',
+'CC1C2CC1(O)C=C2C',
+'NC(C#C)C(CO)C#N',
+'CC1=C(O)N=C(O1)C=O',
+'COC1COC(=O)CO1',
+'OC1CN2C1C21COC1',
+'CC#CC1(CCO)CC1',
+'CC12CC3C1CCOC23',
+'CC#CC(C)C1CC1',
+'CCC1=CC=C(F)C=C1',
+'CC(=NO)C1CCC1',
+'CC1C2C3CC(O3)C12C',
+'CC(=O)C1(CO1)C=O',
+'OC1C2OC2C11CCO1',
+'CC1=NC=C(F)N=C1C',
+'OC12CC3C(C13)C(=O)C2',
+'O=CC(NCC#N)C=O',
+'OCC(CC1CN1)C#N',
+'CC1(O)CC1(C#N)C#N',
+'CC(O)C#CCCC#C',
+'CCOC=NC1(C)CC1',
+'CCCOC1CNC1=O',
+'CCC1N2CC2C11CO1',
+'CC1OC2CC3C2OC13',
+'CNC1=CN=CNC1=O',
+'COC(=O)COC=N',
+'COCC(=O)C1(O)CC1',
+'CC#CCC(C)CC#C',
+'CCC1CC1NCC#N',
+'C1CC1C1C2COC12',
+'C#CC1CCC11COC1',
+'CC1C2CC2C1OC=O',
+'CC(C)(O)C(=NO)C#C',
+'CN1C=C(C=N1)C#C',
+'CC12CC1(C)COC2',
+'COC1=CC(C)=NO1',
+'NC1=C2OCCC2=NN1',
+'CC12NC(C=C1)C2(C)O',
+'CCC1NC1(C)C(C)=O',
+'CC1=CC=C(O)N=C1N',
+'N#CC12CC1C1CC1N2',
+'CC12C3C4C1C1C2C3N41',
+'CC(C)OC1=CNC=N1',
+'CCC1=NC=CO1',
+'CC1=COC(CC#N)=C1',
+'OCC1CN(C=O)C=C1',
+'CCC12CCN1C2C#N',
+'C#CC1N2CC2C11CN1',
+'O=C1CCOCOC1',
+'CC1C2OC3C(O2)C13C',
+'CCN1C(=O)OC=C1C',
+'NC(=O)C1=CCOCC1',
+'CC1OC(=N)C1(O)C#C',
+'C1OCC1C1=CCCC1',
+'OC1CCC2=C1ON=C2',
+'CCOCCC1OC1C',
+'O1C2C3C=CC1C=CC23',
+'CCC#CC(O)C1CN1',
+'CC1CCC(=O)CC1O',
+'COC(C)C#C',
+'COC1CC2C(O)CC12',
+'OC12CCC1C2(O)C#N',
+'CCC1CCCC1',
+'NC(=O)C12NC1CC2=O',
+'C1OC11COC2CC1C2',
+'CCC1COC11COC1',
+'CC1=CCC23CC(O2)C13',
+'CC(C)N(C)C=O',
+'CC1=CNN=C1N(=O)=O',
+'CC12CC1CC2(O)C#C',
+'CC12CC3CCC1C3O2',
+'OCC1C(=O)NC11CC1',
+'CC1=CC2=C(C1)NC=N2',
+'CC1OC(C)(C=O)C=C1',
+'COC(=O)C(C)(C)OC',
+'CC(OC=N)C1CO1',
+'CC(=O)N(CC=O)C=O',
+'CC1CC(O1)(C=O)C#N',
+'CC12NC(=N)OC1C2O',
+'COC1C2C3CC1(C)N23',
+'CC(O)C(O)CCCO',
+'OC1C2CC(=O)COC12',
+'COC=NC1CC1C',
+'COC1OC(=N)C=C1C',
+'CC12C3N(CC13O)C2=O',
+'OC1CCC(=O)C(=O)C1',
+'CCC1C(CN1C)C#N',
+'OC1C2NC2C1CC#C',
+'CC1=C2C(O)CN2N=C1',
+'CC1CC(C)(O)C(=O)O1',
+'NC(=O)N1N=CN=C1N',
+'C1OCC1C1=CC=NN1',
+'O=CN1C=CC(C=O)=C1',
+'CN(CCCC#C)C=O',
+'NC1=C(O)C(O)=C(O)N1',
+'OC12C3C4N3C1CC=C24',
+'OC1CC2C1CNC2=O',
+'CC#CC1OCC1C',
+'CC1C2C3C(C2=O)C13C',
+'C1CC2=COC=C2CO1',
+'OCC1C2C3N1C2C3=O',
+'CC1=CC(C)=NN1C=O',
+'CC12COC1C(O)C2=O',
+'CC1(C)OCC(=N)O1',
+'NC1=CON=C(N)C1=N',
+'CCN1C=C(C)C(N)=N1',
+'CC1CC1(C#C)C1CO1',
+'CC1=C(N=CN1)N1CC1',
+'OCCC1(CCO1)C=O',
+'CC1OCC2=C1N=CN2',
+'O=CC1CC=C(C1)C#N',
+'NC(=O)COC1CCC1',
+'C#CC12CC1C1CC2O1',
+'CCCC(=O)C(=N)OC',
+'CC1N2C3(C)CC3C12C',
+'COC(=N)NC=NC',
+'O=CCC1=CC(=O)CC1',
+'N#CC12CCN1C1CC21',
+'COC1=COC(C)=C1O',
+'CN1CCOC2CC12',
+'CC(COC(N)=O)=NO',
+'CNC1=C(O)C=NN1',
+'CC1OC2C(C)(O)C12O',
+'CC1CC(C)(C#C)C1=O',
+'N#CC1CC2COC1O2',
+'ON=C1C(O)CC1C=O',
+'O=C1C=CC23CC12OC3',
+'OC1C2CN2CC11CO1',
+'COC1OCCC2NC12',
+'OC1CCCC11CN1',
+'CC1CC(C)=CCCO1',
+'CC(C#N)C(CO)C#C',
+'CC12NC1CC2NC=O',
+'OC12CC1C(CC#N)C2',
+'CC1COC11CN2CC12',
+'CCC1C2CC3OC2C13',
+'CC(=O)C#CCC1CC1',
+'CC1=NCC2C(C#N)N12',
+'CCN1CC1(C)C(N)=O',
+'COC1C2OC(=O)OC12',
+'CCC(C)(C=O)C#CC',
+'OCC1C2CC1(N2)C=O',
+'CNC(=O)C(O)C#C',
+'CC1CC(C)C1C#C',
+'CC1(C)C2CC3C2N13',
+'C1C2CCC3OC2OC13',
+'CCNC1=CNC=C1N',
+'CC1(O)C2C(O)CC12O',
+'CN1CC2(O)CC12C',
+'OCC1C2CC1COC2',
+'CC1=NC=C(N)N=C1F',
+'OC1=CNC=NC1=O',
+'O=C1CC23CCCC12N3',
+'N#CC(C#N)N1CC1',
+'NC1=NN(CC#N)C=N1',
+'OC1C2C3C2C2C3C12',
+'CCN1N=NNC1=NC',
+'OCC1CC(C=C1)C#N',
+'OC1C2C1C1C2OC1=O',
+'CCC1CN=CO1',
+'OC12CC1OC2=N',
+'CC(=O)C1CCC11CN1',
+'CC1C2C3CC3(C)CN12',
+'CC12OC1C1CC2(O)C1',
+'CC12C=CC3(O)CC1C23',
+'CC1(CC(O)CO)CC1',
+'CN=C1OC2(CC12)C#N',
+'CC(C)N1C=CC(N)=C1',
+'NC(=O)CCCC1CO1',
+'CC(O)C1=NOC(N)=N1',
+'O=C1OCCCOCO1',
+'CC1=CCC2OCOC12',
+'CC1C2OC(C#N)C12C',
+'OCC1=CC2OC2C1O',
+'CC1=CN2N=CN=C2C1',
+'O=CCC12NC1C1OC21',
+'CCCC1(CN1)C(C)O',
+'CC(CCCC#C)C#C',
+'C#CC1C(C#C)C1C#C',
+'O=C1CC2C(C3CC3)N12',
+'CC12CC(O)(C#C)C1N2',
+'NC1=C(OC(O)=N1)C#C',
+'O=CC12C3OC1C=CC23',
+'CC1(CCCO1)C1CO1',
+'CC1CC(C1)N1CC1',
+'OC1CCCCC1C=O',
+'CC(=O)C1CCC(O)C1',
+'OCC1CCCC=C1',
+'CC1(C)C2C3C(C2O)N13',
+'CC1CC2CC2(O)C1C',
+'COC12CC(C1)C2=O',
+'CC(=O)C1=NNC(N)=C1',
+'CC1=C(C)C(=N)NN=C1',
+'C#CCC1COC1C#N',
+'C1CC11CC2CC2C=C1',
+'CC1(C)CC2(O)CC12O',
+'CC1CC2(CC3NC23)C1',
+'CCCC(C)(OC)C=O',
+'COC(C)C1(O)CC1O',
+'CC1CC(=O)OC1C#N',
+'CCCC1OC(=O)C1C',
+'OCC1=NNC(O)=C1',
+'COC1(CC=CC1)C#C',
+'CCC#CC(C)=NO',
+'CC1(OCOC1=O)C=O',
+'CC(O)C12CN1CC=C2',
+'O=CC1=CC=C(N1)C#N',
+'OC12CC1(O)C(=O)NC2',
+'CC1C2C(CC12C)=NO',
+'COC1C2CC(C)(O)C12',
+'CCCC12CC3C1N3C2',
+'C1OC2OC1C=C2',
+'OC1CCC2C3CC3C12',
+'CCC1C2OC(=O)C12O',
+'CCC1=CON=C1OC',
+'O=C1CCC2(CO2)CC1',
+'CC(NC(=N)CO)C#N',
+'CC1(C)C2C3CC2(O)C13',
+'O=C1CCCCCC=C1',
+'C1C2OC3CC1N1C2C31',
+'N=C1CC2CC(O1)C2=O',
+'OC1(CC2CC2)CCC1',
+'N#CC1OCCC11CC1',
+'N#CC1CC=C2CNC12',
+'CC(C)CCCCCO',
+'CC12CC(C)(C1)C21CC1',
+'CCC(=O)N(C)C=N',
+'OCC1OCCO1',
+'CCCC1OC2CC12O',
+'CCC1(CCC=O)CC1',
+'O=COC1=CN=CN1',
+'CN1CC(=O)NC2CC12',
+'N=C(CC=O)OC=O',
+'OCC1(CNC1=O)C#C',
+'COC(N)=NC(C)C=O',
+'CC1NC1C1(C)CO1',
+'O=CC12CC3C(O1)C23',
+'CC1NC11CN2CC12',
+'CC1NC1C1(C)CN1C',
+'O=C1CN2CC1C21CC1',
+'CN=CN(C=O)C(C)C',
+'CC1C(=O)CC11CN1C',
+'CC(C1CC1)N(C)C=O',
+'CN1CC2CN2C1=O',
+'CC1OC1(CC#C)C#C',
+];
+
+</script>
