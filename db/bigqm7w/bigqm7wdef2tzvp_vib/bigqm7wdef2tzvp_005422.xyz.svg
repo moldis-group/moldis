@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"  standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" 
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg 
+ width="600" height="480" 
+ viewBox="0 0 600 480"
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+
+<title>Gnuplot</title>
+<desc>Produced by GNUPLOT 4.6 patchlevel 2 </desc>
+
+<g id="gnuplot_canvas">
+
+<rect x="0" y="0" width="600" height="480" fill="none"/>
+<defs>
+
+	<circle id='gpDot' r='0.5' stroke-width='0.5'/>
+	<path id='gpPt0' stroke-width='0.222' stroke='currentColor' d='M-1,0 h2 M0,-1 v2'/>
+	<path id='gpPt1' stroke-width='0.222' stroke='currentColor' d='M-1,-1 L1,1 M1,-1 L-1,1'/>
+	<path id='gpPt2' stroke-width='0.222' stroke='currentColor' d='M-1,0 L1,0 M0,-1 L0,1 M-1,-1 L1,1 M-1,1 L1,-1'/>
+	<rect id='gpPt3' stroke-width='0.222' stroke='currentColor' x='-1' y='-1' width='2' height='2'/>
+	<rect id='gpPt4' stroke-width='0.222' stroke='currentColor' fill='currentColor' x='-1' y='-1' width='2' height='2'/>
+	<circle id='gpPt5' stroke-width='0.222' stroke='currentColor' cx='0' cy='0' r='1'/>
+	<use xlink:href='#gpPt5' id='gpPt6' fill='currentColor' stroke='none'/>
+	<path id='gpPt7' stroke-width='0.222' stroke='currentColor' d='M0,-1.33 L-1.33,0.67 L1.33,0.67 z'/>
+	<use xlink:href='#gpPt7' id='gpPt8' fill='currentColor' stroke='none'/>
+	<use xlink:href='#gpPt7' id='gpPt9' stroke='currentColor' transform='rotate(180)'/>
+	<use xlink:href='#gpPt9' id='gpPt10' fill='currentColor' stroke='none'/>
+	<use xlink:href='#gpPt3' id='gpPt11' stroke='currentColor' transform='rotate(45)'/>
+	<use xlink:href='#gpPt11' id='gpPt12' fill='currentColor' stroke='none'/>
+</defs>
+<g style="fill:none; color:white; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+</g>
+<g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<path stroke='black'  d='M72.6,413.4 L63.6,413.4  h0.01'/>	<g transform="translate(55.3,417.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:end">
+		<text> 0</text>
+	</g>
+	<path stroke='black'  d='M72.6,356.7 L63.6,356.7  h0.01'/>	<g transform="translate(55.3,361.2)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:end">
+		<text> 10</text>
+	</g>
+	<path stroke='black'  d='M72.6,300.1 L63.6,300.1  h0.01'/>	<g transform="translate(55.3,304.6)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:end">
+		<text> 20</text>
+	</g>
+	<path stroke='black'  d='M72.6,243.4 L63.6,243.4  h0.01'/>	<g transform="translate(55.3,247.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:end">
+		<text> 30</text>
+	</g>
+	<path stroke='black'  d='M72.6,186.7 L63.6,186.7  h0.01'/>	<g transform="translate(55.3,191.2)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:end">
+		<text> 40</text>
+	</g>
+	<path stroke='black'  d='M72.6,130.0 L63.6,130.0  h0.01'/>	<g transform="translate(55.3,134.5)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:end">
+		<text> 50</text>
+	</g>
+	<path stroke='black'  d='M72.6,73.4 L63.6,73.4  h0.01'/>	<g transform="translate(55.3,77.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:end">
+		<text> 60</text>
+	</g>
+	<path stroke='black'  d='M72.6,16.7 L63.6,16.7  h0.01'/>	<g transform="translate(55.3,21.2)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:end">
+		<text> 70</text>
+	</g>
+	<path stroke='black'  d='M72.6,413.4 L72.6,422.4  h0.01'/>	<g transform="translate(72.6,444.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:middle">
+		<text> 0</text>
+	</g>
+	<path stroke='black'  d='M135.4,413.4 L135.4,422.4  h0.01'/>	<g transform="translate(135.4,444.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:middle">
+		<text> 500</text>
+	</g>
+	<path stroke='black'  d='M198.2,413.4 L198.2,422.4  h0.01'/>	<g transform="translate(198.2,444.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:middle">
+		<text> 1000</text>
+	</g>
+	<path stroke='black'  d='M261.0,413.4 L261.0,422.4  h0.01'/>	<g transform="translate(261.0,444.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:middle">
+		<text> 1500</text>
+	</g>
+	<path stroke='black'  d='M323.8,413.4 L323.8,422.4  h0.01'/>	<g transform="translate(323.8,444.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:middle">
+		<text> 2000</text>
+	</g>
+	<path stroke='black'  d='M386.6,413.4 L386.6,422.4  h0.01'/>	<g transform="translate(386.6,444.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:middle">
+		<text> 2500</text>
+	</g>
+	<path stroke='black'  d='M449.4,413.4 L449.4,422.4  h0.01'/>	<g transform="translate(449.4,444.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:middle">
+		<text> 3000</text>
+	</g>
+	<path stroke='black'  d='M512.2,413.4 L512.2,422.4  h0.01'/>	<g transform="translate(512.2,444.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:middle">
+		<text> 3500</text>
+	</g>
+	<path stroke='black'  d='M575.0,413.4 L575.0,422.4  h0.01'/>	<g transform="translate(575.0,444.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:middle">
+		<text> 4000</text>
+	</g>
+	<path stroke='black'  d='M72.6,16.7 L72.6,413.4 L575.0,413.4 M575.0,16.7 M72.6,16.7  h0.01'/>	<g transform="translate(17.6,215.1) rotate(270)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:middle">
+		<text>IR Intensity [arb. unit]</text>
+	</g>
+	<g transform="translate(323.8,471.9)" style="stroke:none; fill:black; font-family:Times; font-size:12.00pt; text-anchor:middle">
+		<text>Frequencies [cm^{-1}]</text>
+	</g>
+</g>
+	<g id="gnuplot_plot_1" ><title>gnuplot_plot_1</title>
+<g style="fill:none; color:white; stroke:black; stroke-width:3.00; stroke-linecap:butt; stroke-linejoin:miter">
+</g>
+<g style="fill:none; color:red; stroke:currentColor; stroke-width:3.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<path stroke='rgb(  0,   0, 255)'  d='M82.0,413.4 L82.0,413.2 M88.3,413.4 L88.3,388.4 M98.7,413.4 L98.7,410.2 M101.3,413.4 L101.3,353.3 
+		M102.3,413.4 L102.3,405.2 M105.3,413.4 L105.3,277.6 M109.2,413.4 L109.2,335.1 M118.5,413.4 L118.5,411.8 
+		M123.2,413.4 L123.2,400.2 M125.1,413.4 L125.1,405.2 M132.9,413.4 L132.9,389.4 M153.9,413.4 L153.9,313.7 
+		M176.8,413.4 L176.8,63.3 M179.6,413.4 L179.6,243.7 M185.4,413.4 L185.4,201.6 M190.5,413.4 L190.5,313.5 
+		M192.2,413.4 L192.2,237.0 M195.2,413.4 L195.2,361.2 M199.0,413.4 L199.0,334.5 M205.2,413.4 L205.2,195.2 
+		M214.3,413.4 L214.3,355.6 M218.6,413.4 L218.6,386.4 M221.8,413.4 L221.8,397.5 M223.6,413.4 L223.6,359.0 
+		M225.7,413.4 L225.7,405.6 M236.2,413.4 L236.2,401.9 M240.7,413.4 L240.7,384.4 M242.5,413.4 L242.5,409.4 
+		M245.7,413.4 L245.7,368.1 M249.5,413.4 L249.5,388.3 M251.1,413.4 L251.1,409.2 M252.4,413.4 L252.4,343.6 
+		M253.7,413.4 L253.7,365.6 M260.0,413.4 L260.0,397.4 M260.8,413.4 L260.8,403.1 M261.9,413.4 L261.9,373.0 
+		M262.4,413.4 L262.4,345.3 M264.4,413.4 L264.4,339.1 M281.8,413.4 L281.8,182.8 M449.4,413.4 L449.4,92.6 
+		M454.4,413.4 L454.4,276.9 M454.6,413.4 L454.6,294.6 M455.0,413.4 L455.0,175.3 M459.8,413.4 L459.8,375.8 
+		M461.3,413.4 L461.3,255.7 M463.5,413.4 L463.5,393.8 M464.4,413.4 L464.4,57.1 M466.8,413.4 L466.8,291.8 
+		M467.4,413.4 L467.4,307.6 M518.2,413.4 L518.2,406.8 M528.4,413.4 L528.4,384.3  h0.01'/></g>
+	</g>
+<g style="fill:none; color:white; stroke:rgb(  0,   0, 255); stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+</g>
+<g style="fill:none; color:black; stroke:currentColor; stroke-width:1.00; stroke-linecap:butt; stroke-linejoin:miter">
+	<path stroke='black'  d='M72.6,16.7 L72.6,413.4 L575.0,413.4 M575.0,16.7 M72.6,16.7  h0.01'/></g>
+</g>
+</svg>
+

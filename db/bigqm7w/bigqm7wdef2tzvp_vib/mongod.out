@@ -1,0 +1,44 @@
+2022-03-29T17:41:49.409+0530 I CONTROL  [initandlisten] MongoDB starting : pid=76635 port=27017 dbpath=/data/db 64-bit host=venus.tifrh.res.in
+2022-03-29T17:41:49.409+0530 I CONTROL  [initandlisten] db version v3.2.22
+2022-03-29T17:41:49.409+0530 I CONTROL  [initandlisten] git version: 105acca0d443f9a47c1a5bd608fd7133840a58dd
+2022-03-29T17:41:49.409+0530 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.1e-fips 11 Feb 2013
+2022-03-29T17:41:49.409+0530 I CONTROL  [initandlisten] allocator: tcmalloc
+2022-03-29T17:41:49.409+0530 I CONTROL  [initandlisten] modules: none
+2022-03-29T17:41:49.409+0530 I CONTROL  [initandlisten] build environment:
+2022-03-29T17:41:49.409+0530 I CONTROL  [initandlisten]     distmod: rhel70
+2022-03-29T17:41:49.409+0530 I CONTROL  [initandlisten]     distarch: x86_64
+2022-03-29T17:41:49.409+0530 I CONTROL  [initandlisten]     target_arch: x86_64
+2022-03-29T17:41:49.409+0530 I CONTROL  [initandlisten] options: {}
+2022-03-29T17:41:49.444+0530 I -        [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2022-03-29T17:41:49.444+0530 W -        [initandlisten] Detected unclean shutdown - /data/db/mongod.lock is not empty.
+2022-03-29T17:41:49.445+0530 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2022-03-29T17:41:49.445+0530 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=301G,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),
+2022-03-29T17:41:49.565+0530 I STORAGE  [initandlisten] WiredTiger [1648555909:565067][76635:0x7f0ecffe2dc0], txn-recover: Main recovery loop: starting at 94/128
+2022-03-29T17:41:49.565+0530 I STORAGE  [initandlisten] WiredTiger [1648555909:565421][76635:0x7f0ecffe2dc0], txn-recover: Recovering log 94 through 95
+2022-03-29T17:41:49.566+0530 I STORAGE  [initandlisten] WiredTiger [1648555909:566333][76635:0x7f0ecffe2dc0], file:index-1--7836788444075310938.wt, txn-recover: Recovering log 95 through 95
+2022-03-29T17:41:49.699+0530 I CONTROL  [initandlisten] ** WARNING: You are running this process as the root user, which is not recommended.
+2022-03-29T17:41:49.699+0530 I CONTROL  [initandlisten] 
+2022-03-29T17:41:49.700+0530 I CONTROL  [initandlisten] 
+2022-03-29T17:41:49.700+0530 I CONTROL  [initandlisten] ** WARNING: You are running on a NUMA machine.
+2022-03-29T17:41:49.700+0530 I CONTROL  [initandlisten] **          We suggest launching mongod like this to avoid performance problems:
+2022-03-29T17:41:49.700+0530 I CONTROL  [initandlisten] **              numactl --interleave=all mongod [other options]
+2022-03-29T17:41:49.700+0530 I CONTROL  [initandlisten] 
+2022-03-29T17:41:49.700+0530 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/enabled is 'always'.
+2022-03-29T17:41:49.700+0530 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2022-03-29T17:41:49.700+0530 I CONTROL  [initandlisten] 
+2022-03-29T17:41:49.700+0530 I CONTROL  [initandlisten] ** WARNING: /sys/kernel/mm/transparent_hugepage/defrag is 'always'.
+2022-03-29T17:41:49.700+0530 I CONTROL  [initandlisten] **        We suggest setting it to 'never'
+2022-03-29T17:41:49.700+0530 I CONTROL  [initandlisten] 
+2022-03-29T17:41:49.706+0530 I NETWORK  [HostnameCanonicalizationWorker] Starting hostname canonicalization worker
+2022-03-29T17:41:49.706+0530 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+2022-03-29T17:41:49.707+0530 I NETWORK  [initandlisten] waiting for connections on port 27017
+2022-03-29T17:41:50.003+0530 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
+2022-03-29T17:41:50.267+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55130 #1 (1 connection now open)
+2022-03-29T17:41:50.279+0530 I NETWORK  [conn1] received client metadata from 127.0.0.1:55130 conn1: { driver: { name: "nodejs", version: "3.6.10" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.6.1.el7.x86_64" }, platform: "'Node.js v6.1.0, function () { return 'LE'; } (unified)" }
+2022-03-29T17:41:54.133+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55134 #2 (2 connections now open)
+2022-03-29T17:41:54.136+0530 I NETWORK  [conn2] received client metadata from 127.0.0.1:55134 conn2: { driver: { name: "nodejs", version: "3.6.10" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "3.10.0-514.6.1.el7.x86_64" }, platform: "'Node.js v6.1.0, function () { return 'LE'; } (unified)" }
+2022-03-29T18:00:37.198+0530 I COMMAND  [conn2] command moldis.mol134k_2 command: find { find: "mol134k_2", filter: { NH: { $gte: 1 }, NC: { $lte: 0 }, NN: { $lte: 0 }, NO: { $gte: 1 }, NF: { $lte: 0 } }, returnKey: false, showRecordId: false } planSummary: COLLSCAN keysExamined:0 docsExamined:130831 cursorExhausted:1 keyUpdates:0 writeConflicts:0 numYields:1022 nreturned:1 reslen:767 locks:{ Global: { acquireCount: { r: 2046 } }, Database: { acquireCount: { r: 1023 } }, Collection: { acquireCount: { r: 1023 } } } protocol:op_query 255ms
+2022-03-29T18:46:48.483+0530 I NETWORK  [initandlisten] connection accepted from 127.0.0.1:55260 #3 (3 connections now open)
+2022-03-29T18:46:49.222+0530 I NETWORK  [conn3] end connection 127.0.0.1:55260 (2 connections now open)
+2022-03-29T18:47:05.871+0530 I NETWORK  [conn1] end connection 127.0.0.1:55130 (1 connection now open)
+2022-03-29T18:47:05.871+0530 I NETWORK  [conn2] end connection 127.0.0.1:55134 (1 connection now open)
