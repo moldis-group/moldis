@@ -105,10 +105,12 @@ async function show(row) {
     const xyzText=await response.text();
     if(token!==selectionToken)return;
     const viewer=$3Dmol.createViewer(viewerBox,{backgroundColor:'white'});
-    viewer.addModel(xyzText,'xyz');
+    const model=viewer.addModel(xyzText,'xyz');
+    const atomCount=model.selectedAtoms({}).length;
+    if(!atomCount)throw Error('XYZ loaded but contains no atoms recognized by 3Dmol. Check the XYZ format.');
     viewer.setStyle({},{stick:{},sphere:{scale:0.3}});
     viewer.zoomTo();viewer.render();
-    viewerStatus.textContent='Drag to rotate; scroll to zoom.';
+    viewerStatus.textContent=`${atomCount} atoms loaded. Drag to rotate; scroll to zoom.`;
   } catch(error) {
     if(token===selectionToken)viewerStatus.textContent=`Could not display ${stem}.xyz: ${error.message}`;
   }
@@ -116,5 +118,5 @@ async function show(row) {
   addFigure(el,`rmq1d_svg/${stem}_BS.svg`,'Electronic band structure');
   addFigure(el,`rmq1d_svg/${stem}_phonon_BS.svg`,'Phonon band structure');
 }
-async function main(){setup();try{const response=await fetch('rmq1d.tsv');if(!response.ok)throw Error(`HTTP ${response.status}: rmq1d.tsv`);state.data=parseTSV(await response.text());render()}catch(error){$('status').textContent=`Could not load the dataset: ${error.message}. Serve this folder with a local HTTP server or GitHub Pages.`}}
+async function main(){setup();try{const response=await fetch('rmq1d.tsv');if(!response.ok)throw Error(`HTTP ${response.status}: rmq1d.tsv`);state.data=parseTSV(await response.text());render();if(state.matches.length)show(state.matches[0])}catch(error){$('status').textContent=`Could not load the dataset: ${error.message}. Serve this folder with a local HTTP server or GitHub Pages.`}}
 main();
