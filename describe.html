@@ -1,0 +1,819 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+
+<script type="text/javascript">
+function openpage(name)
+{
+if(name=="link1")
+{window.open("http://www.nature.com/articles/sdata201422");}
+if(name=="link2")
+{window.open("https://aip.scitation.org/doi/10.1063/1.5088083");}
+if(name=="link3")
+{window.open("https://aip.scitation.org/doi/full/10.1063/1.4928757");}
+if(name=="link4")
+{window.open("https://aip.scitation.org/doi/10.1063/5.0041717");}
+if(name=="link5")
+{window.open("https://iopscience.iop.org/article/10.1088/2632-2153/abe347");}
+if(name=="link6")
+{window.open("https://doi.org/10.1039/D1DD00031D");}
+else if(name=="reg1")
+{window.open("./reg_mc.php","_top");}
+
+else if(name=="reg2")
+{window.open("./reg_hc.php","_top");}
+
+else if(name=="dset1")
+{window.open("https://moldis.tifrh.res.in/db/db134k");}
+else if(name=="dset2")
+{window.open("https://moldis.tifrh.res.in/db/dbbnpah");}
+else if(name=="dset3")
+{window.open("https://moldis.tifrh.res.in/db/dbqm8ex");}
+else if(name=="dset4")
+{window.open("https://moldis.tifrh.res.in/db/rmq1d");}
+else if(name=="dset5")
+{window.open("https://moldis.tifrh.res.in/db/dbbigqm7wdef2svp");}
+else if(name=="dset6")
+{window.open("https://moldis.tifrh.res.in/db/dbbigqm7wdef2tzvp");}
+}
+</script>
+
+<style>
+body
+{
+	font-family: "Raleway";
+	font-size: 15px;
+}
+fieldset 
+{
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+}
+
+.l1
+{
+	background: #009900;
+	border: solid 1px #009900;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	padding: 6px;
+	font-family: "Raleway";
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+}
+.l2
+{
+	background: #ff3333;
+	border: solid 1px #ff3333;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	padding: 6px;
+	font-family: "Raleway";
+	font-size: 15px;
+	font-weight: bold;
+	color: white;
+}
+
+.button1 
+{
+    background-color: #990000;
+    border: none;
+	margin: auto;
+    color: white;
+    width:200px;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+	display: block;
+	float: right;
+    font-size: 18px;
+	font-weight: bold;
+	line-height:15px;
+	font-family: "Raleway";
+}
+.button1:hover
+{
+	cursor: pointer;
+	background-color: #00004d;
+}
+.button3 
+{
+    background-color: #008073;
+    border: none;
+	margin: auto;
+    color: white;
+    width:200px;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+	display: block;
+	float: right;
+    font-size: 18px;
+	font-weight: bold;
+	line-height:15px;
+	font-family: "Raleway";
+}
+.button3:hover
+{
+	cursor: pointer;
+	background-color: #00004d;
+}
+.button4 
+{
+    background-color: #1f0075;
+    border: none;
+	margin: auto;
+    color: white;
+    width:200px;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+	display: block;
+	float: right;
+    font-size: 18px;
+	font-weight: bold;
+	line-height:15px;
+	font-family: "Raleway";
+}
+.button4:hover
+{
+	cursor: pointer;
+	background-color: #00004d;
+}
+
+.button2 
+{
+    background-color: #990000;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    text-align: center;
+    text-decoration: none;
+	display: block;
+    font-size: 18px;
+	font-weight: bold;
+	line-height:15px;
+	font-family: "Raleway";
+}
+.button2:hover
+{
+	cursor: pointer;
+	background-color: #00004d;
+}
+a:link 
+{
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:visited 
+{
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover 
+{
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:active 
+{
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.molimg 
+{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.molimg:hover 
+{
+opacity: 0.7;
+}
+
+.molgif 
+{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.molgif:hover 
+{
+opacity: 0.7;
+}
+
+.molabs
+{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.molabs:hover 
+{
+opacity: 0.7;
+}
+
+.molhc
+{
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.molhc:hover 
+{
+opacity: 0.7;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+blink, .blink {
+  -webkit-animation: blink 1s step-end infinite;
+  -moz-animation: blink 1s step-end infinite;
+  -o-animation: blink 1s step-end infinite;
+  animation: blink 1s step-end infinite;
+}
+
+@-webkit-keyframes blink {
+  67% { opacity: 0 }
+}
+
+@-moz-keyframes blink {
+  67% { opacity: 0 }
+}
+
+@-o-keyframes blink {
+  67% { opacity: 0 }
+}
+
+@keyframes blink {
+  67% { opacity: 0 }
+}
+</style>
+
+
+<body>
+<!--
+<span style="text-decoration:blink;">Users of Public networks should ensure that PORT 3000 is open for listening. If the Access button does not redirect to the query page, first check if the popups are unblocked.  If the problem persists, ask your system admin to open PORT 3000 for listening for your IP address.<br></span>
+-->
+<!-- 134k dataset -->
+<br>
+<form method="post" enctype="multipart/form-data">
+<fieldset>
+<legend class="l1">Open Access</legend>
+<table width="100%" align="center">
+<col width="32%">
+<col width="45%">
+<tr>
+<td colspan="2">
+<font style="font-size:15px;" />
+</td>
+<td rowspan="2">
+<input type="submit" class="button1" name="dset1" value="Access" onclick="openpage(name);"></a></td>
+</tr>
+<tr>
+<td align="left">
+<img id="molimg" class="molimg" src="/Images/134k.png" width=300 height=250 alt="            ">
+
+<!-- The Image Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('molimg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+</td>
+
+<td>
+<h3>Structures and Properties of 134 kilo QM9 Molecules</h3>
+<font style="font-size:15px;"/>
+Structures, properties and NMR spectra of 133885 (134 kilo) synthetically feasible small organic molecules made up of up to 9 CHONF atoms computed at the B3LYP/6-31G(2df,p) level. 
+<br><a href="https://www.nature.com/articles/sdata201422" name="link1" onclick="openpage(name);"><br><i>Quantum chemistry structures and properties of 134 kilo molecules</i><br>R. Ramakrishnan,  P. O. Dral, M. Rupp, O. A. v. Lilienfeld<br>Scientific Data 1, 140022 (2014).</a>
+<br><a href="" name="link5" onclick="openpage(name);"><br><i>Revving up 13C NMR shielding predictions across chemical space: Benchmarks for atoms-in-molecules kernel machine learning with new data for 134 kilo molecules</i><br>A. Gupta, S. Chakraborty, R. Ramakrishnan<br>Machine Learning: Science and Technology 2 (2021) 035010.</a></td>
+</tr>
+</table>
+</fieldset>
+</form>
+
+<!-- BNPAH dataset -->
+<br>
+<form method="post" enctype="multipart/form-data">
+<fieldset>
+<legend class="l1">Open Access</legend>
+<table width="100%" align="center">
+<col width="32%">
+<col width="45%">
+<tr>
+<td colspan="2">
+<font style="font-size:15px;" />
+</td>
+<td rowspan="2">
+<input type="submit" class="button1" name="dset2" value="Access" onclick="openpage(name);"></a></td>
+</tr>
+<tr>
+<td align="left">
+<img id="molimg" class="molimg" src="http://moldis.tifrh.res.in/Images/abstract1-1.jpg" width=300 height=250 alt="            ">
+
+<!-- The Image Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('molimg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+</td>
+
+<td>
+<h3>B, N-substituted Polycyclic Aromatic Hydrocarbons</h3>
+<font style="font-size:15px;"/>
+Structures and properties of 
+77 polycyclic aromatic hydrocarbons and 33,059 B, N substituted compounds computed at the RI-TPSSh/def2-SVP level. 
+
+
+
+<br><a href="https://aip.scitation.org/doi/10.1063/1.5088083" name="link2" onclick="openpage(name);"><br><i>The chemical space of B, N-substituted polycyclic aromatic hydrocarbons: Combinatorial enumeration and high-throughput first-principles modeling</i><br> S. Chakraborty, P. Kayastha, R. Ramakrishnan <br> J. Chem. Phys. 150, 114106 (2019).</a></td>
+</tr>
+</table>
+</fieldset>
+</form>
+
+<!-- Macrocycles dataset -->
+<!--
+<form method="post" action="pwdcheck.php">
+<fieldset>
+<legend class="l2">Under development, mestricted Access</legend>
+<table width="100%" align="right">
+<col width="32%">
+<col width="45%">
+<tr>
+<td colspan="2"><font style="font-size:15px;" /></td>
+<td rowspan="2">
+<font style="font-size:15px; float:right;" /><center/><b>Login to access</b><br><br>
+	<table align="center">
+	<tr>
+	<td><font style="font-size:15px; vertical-align:middle;" style="float:right;">User ID</td>
+	<td><input type="text" name="uid" id="uid" style="float:right;"><br></td>
+	</tr>
+	<tr>
+	<td><font style="font-size:15px; vertical-align:middle;" style="float:right;"/>Password</td>
+	<td><input type="password" name="pwd" id="pwd" style="vertical-align:middle;" style="float:right;"><br><br></td>
+	</tr>
+	<tr>
+-->
+        <!-- <td><input class="button2" type="button" name="reg1" value="Register" onclick="openpage(name);" style="float:left;"></td> -->
+<!--
+        <td colspan="2" align="right"><input class="button2" type="submit" name="dset2" value="Access" style="float:right;"></td>
+        </tr>
+	</table>
+</td>
+</tr>
+<tr>
+<td align="left">
+<img id="molgif" class="molgif" src="/Images/output1.gif" width=400 height=200 alt="            " style="overflow: hidden;">
+</td>
+-->
+<!-- The Image Modal -->
+<!--
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('molgif');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
+<td><h3>Macrocycles</h3></td>
+</tr>
+</table>
+</fieldset>
+</form>
+-->
+
+<!-- Hydrocarbon dataset -->
+<!--
+<form method="post" action="pwdcheck_hc.php">
+<fieldset>
+<legend class="l2">Under development, Restricted Access</legend>
+<table width="100%" align="right">
+<col width="32%">
+<col width="45%">
+<tr>
+<td colspan="2"><font style="font-size:15px;" /></td>
+<td rowspan="2">
+<font style="font-size:15px; float:right;" /><center/><b>Login to access</b><br><br>
+	<table align="center">
+	<tr>
+	<td><font style="font-size:15px; vertical-align:middle;" style="float:right;">User ID</td>
+	<td><input type="text" name="uid" id="uid" style="float:right;"><br></td>
+	</tr>
+	<tr>
+	<td><font style="font-size:15px; vertical-align:middle;" style="float:right;"/>Password</td>
+	<td><input type="password" name="pwd" id="pwd" style="vertical-align:middle;" style="float:right;"><br><br></td>
+	</tr>
+	<tr>
+-->
+        <!-- <td><input class="button2" type="button" name="reg2" value="Register" onclick="openpage(name);" style="float:left;"></td> -->
+<!--
+        <td align="right" colspan="2"><input class="button2" type="submit" name="dset3" value="Access" style="float:right;"></td></tr>
+	</table>
+</td>
+</tr>
+<tr>
+<td><img id="molhc" class="molhc" src="/Images/1N97_ligplot-page-001.jpeg" width=300 height=300 alt="            ">
+
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('molhc');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+</td>
+<td><h3>Reactions@P<sub>450</sub></h3></td>
+</tr>
+</table>
+</fieldset>
+</form>
+
+-->
+
+<!-- del22K dataset -->
+<br>
+<form method="post" enctype="multipart/form-data">
+<fieldset>
+<legend class="l1">Open Access</legend>
+<table width="100%" align="center">
+<col width="32%">
+<col width="45%">
+<tr>
+<td colspan="2">
+<font style="font-size:15px;" />
+</td>
+<td rowspan="2">
+<input type="submit" class="button1" name="dset3" value="Access" onclick="openpage(name);"></a></td>
+</tr>
+<tr>
+<td align="left">
+<img id="molimg" class="molimg" src="https://www.tifrh.res.in/~ramakrishnan/uploads/density03.png" width=300 height=200 alt="            ">
+
+<!-- The Image Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('molimg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+</td>
+
+<td>
+<h3>Electronic Spectra of 22 kilo QM8 Molecules</h3>
+<font style="font-size:15px;"/>
+The dataset comprises structures of 21786 (22k) QM8 molecules relaxed at the B3LYP/6-31G(2df,p) level (from Scientific Data, 1 (2014) 140022), along with valence electronic excitation energies (in eV and nm) and 
+oscillator strengths (in au, length representation) computed at the RICC2/def2TZVP level.
+
+
+<br><a href="https://aip.scitation.org/doi/10.1063/1.4928757" name="link3" onclick="openpage(name);"><br><i>Electronic spectra from TDDFT and machine learning in chemical space</i><br> R. Ramakrishnan, M. Hartmann, E. Tapavicza, O. A. von Lilienfeld <br>J. Chem. Phys. 143, 084111 (2015).</a>
+<br><a href="https://www.nature.com/articles/sdata201422" name="link1" onclick="openpage(name);"><br><i>Quantum chemistry structures and properties of 134 kilo molecules</i><br>R. Ramakrishnan,  P. O. Dral, M. Rupp, O. A. v. Lilienfeld<br>Scientific Data 1, 140022 (2014).</a>
+</td>
+</tr>
+</table>
+</fieldset>
+</form>
+
+<!-- rmq1d dataset -->
+<br>
+<form method="post" enctype="multipart/form-data">
+<fieldset>
+<!-- <legend class="l1">Open Access (under construction)</legend> -->
+<legend class="l1">Open Access</legend>
+<table width="100%" align="center">
+<col width="32%">
+<col width="45%">
+<tr>
+<td colspan="2">
+<font style="font-size:15px;" />
+</td>
+<td rowspan="2">
+<input type="submit" class="button1" name="dset4" value="Access" onclick="openpage(name);"></a></td>
+</tr>
+<tr>
+<td align="left">
+<img id="molimg" class="molimg" src="Images/toc.png" width=300 height=200 alt="            ">
+
+<!-- The Image Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('molimg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+</td>
+
+<td>
+<h3>Properties of 1199 Ring-Metal Q1D Organometallic Materials</h3>
+<font style="font-size:15px;"/>
+The dataset comprises geometry, formation energy, band gap, electronic band structure
+ and phonon band structure of
+1199 ring-metal Q1D organometallic materials
+combinatorially generated with B/N/S-substituted cyclopentadienyl anion and monovalent metal cations. 
+The results are collected for the translationally symmetric phase with the unit cell 
+containing a metal and a ring.
+<br><a href="" name="link4" onclick="openpage(name);"><br><i>High-Throughput Design of Peierls and Charge Density Wave Phases in Q1D Organometallic Materials</i><br> P. Kayastha, R. Ramakrishnan<br>J. Chem. Phys., 154 (2021) 061102.</a>
+<br>
+</td>
+</tr>
+</table>
+</fieldset>
+</form>
+
+<!-- bigqm7w dataset -->
+<br>
+<form method="post" enctype="multipart/form-data">
+<fieldset>
+<!-- <legend class="l1">Open Access (under construction)</legend> -->
+<legend class="l1">Open Access</legend>
+<table width="100%" align="center">
+<col width="32%">
+<col width="45%">
+
+<tr>
+<td colspan="2"> <font style="font-size:15px;" /> </td>
+<td rowspan="2"> 
+<input type="submit" class="button1" name="dset5" value="Access" onclick="openpage(name);"></a>
+</td>
+</tr>
+
+<tr>
+<td align="left">
+<img id="molimg" class="molimg" src="https://raw.githubusercontent.com/moldis-group/bigQM7w/main/bigQM7w.svg" width=300 height=200 alt="            ">
+
+<!-- The Image Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('molimg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+</td>
+
+<td>
+<h3>bigQM7ω</h3>
+<font style="font-size:15px;"/>
+The bigQM7ω dataset contains structures and properties of 12,880 molecules containing up to 7 heavy atoms calculated using the ωB97XD range-separated hybrid density functional theory. You can query on ωB97XD/def2SVP-level structures/properties and electronic spectra at the TDωB97XD/def2SVPD level. <br><br>
+<br><a href="" name="link6" onclick="openpage(name);"><br><i>The Resolution-vs.-Accuracy Dilemma in Machine Learning Modeling of Electronic Excitation Spectra</i><br> P. Kayastha, S. Chakraborty, R. Ramakrishnan<br>Digital Discovery (2022)<br>https://doi.org/10.1039/D1DD00031D</a>
+<br>
+</td>
+</tr>
+</table>
+</fieldset>
+</form>
+
+
+</body>
+
+
+

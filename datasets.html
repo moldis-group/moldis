@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Datasets | MolDis</title>
+<link rel="icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<style>
+  :root {
+    font-family:Arial,sans-serif;
+    color:#171717;
+    background:#fff;
+  }
+  * {
+    box-sizing:border-box;
+  }
+  body {
+    margin:0;
+  }
+  a {
+    color:inherit;
+  }
+  header,main,footer {
+    max-width:1331px;
+    margin:auto;
+    padding:12px 20px;
+  }
+  .contact {
+    height:60px;
+    padding:8px 30px;
+    background:#f5f5ef;
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    align-items:center;
+    flex-wrap:wrap;
+    font-size:15px;
+  }
+  .contact a {
+    text-decoration:none;
+  }
+  .contact form {
+    display:flex;
+  }
+  .contact input {
+    padding:8px;
+    max-width:230px;
+  }
+  .contact button {
+    padding:8px;
+  }
+  .branding {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+    min-height:103px;
+  }
+  .branding .moldis-logo {
+    width:644px;
+    height:95px;
+    object-fit:contain;
+    object-position:left center;
+  }
+  .branding .tifr-logo {
+    width:180px;
+    height:95px;
+    object-fit:contain;
+    object-position:right center;
+  }
+  .branding img {
+    max-height:95px;
+    max-width:100%;
+    object-fit:contain;
+  }
+  nav {
+    display:flex;
+    justify-content:flex-end;
+    flex-wrap:wrap;
+    gap:4px;
+  }
+  nav a {
+    background:#900;
+    color:white;
+    text-decoration:none;
+    padding:12px 25px;
+    font-weight:bold;
+  }
+  nav a:hover {
+    background:#00004d;
+  }
+  .datasets-panel {
+    width:calc(100% - 40px);
+    max-width:1291px;
+    padding:8px 0 12px;
+    background:#f5f5ef;
+  }
+  .datasets-content {
+    display:block;
+    width:100%;
+    height:1650px;
+    border:0;
+    background:#f5f5ef;
+  }
+  footer {
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+    flex-wrap:wrap;
+  }
+  .follow-link {
+    display:inline-block;
+    align-self:flex-start;
+    padding:10px 16px;
+    border-radius:20px;
+    background:#000;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    text-decoration:none;
+  }
+  .follow-link:hover {
+    background:#333;
+  }
+  footer p {
+    margin:4px 0;
+  }
+  .copyright {
+    text-align:center;
+    color:#888;
+    max-width:none;
+    padding:16px;
+  }
+@media (max-width: 780px) {
+  .contact {
+    height:auto;
+    min-height:60px;
+  }
+  .branding .moldis-logo {
+    max-width:100%;
+    height:auto;
+  }
+  .branding .tifr-logo {
+    max-width:130px;
+    height:auto;
+  }
+  nav {
+    justify-content:flex-start;
+  }
+  nav a {
+    padding:10px 16px;
+  }
+}
+</style>
+</head>
+<body>
+  <header>
+    <div class="contact">
+      <a href="mailto:ramakrishnan@tifrh.res.in">Contact: ramakrishnan@tifrh.res.in</a>
+      <form action="https://www.google.com/search" method="get" target="_blank">
+        <input type="hidden" name="sitesearch" id="site">
+        <input type="search" name="q" placeholder="Search MolDis" aria-label="Search MolDis">
+        <button type="submit">Search</button>
+      </form>
+    </div>
+    <div class="branding">
+      <img class="moldis-logo" src="Images/MolDis.png" width="644" height="95" alt="MolDis">
+      <a href="https://www.tifr.res.in/" target="_blank" rel="noopener" aria-label="Tata Institute of Fundamental Research">
+        <img class="tifr-logo" src="Images/Logo.png" width="180" height="95" alt="TIFR">
+      </a>
+    </div>
+    <nav aria-label="Main navigation">
+      <a href="./">Home</a>
+      <a href="datasets.html">Datasets</a>
+      <a href="developers.html">Developers</a>
+      <a href="lab.html">Lab</a>
+    </nav>
+  </header>
+  <main class="datasets-panel">
+  <iframe class="datasets-content" src="describe.html" title="MolDis datasets" scrolling="yes"></iframe>
+</main>
+<footer>
+  <a class="follow-link" href="https://twitter.com/raghurama123" target="_blank" rel="noopener">Follow @raghurama123</a>
+  <p>
+    <strong>Tata Institute of Fundamental Research</strong>
+    <br>Hyderabad 500107, India<br>Email: <a href="mailto:ramakrishnan@tifrh.res.in">ramakrishnan@tifrh.res.in</a>
+  </p>
+</footer>
+<div class="copyright">Copyright © 2018 MolDis. All rights reserved.</div>
+<script>document.querySelector('#site').value=location.hostname;</script>
+</body>
+</html>
