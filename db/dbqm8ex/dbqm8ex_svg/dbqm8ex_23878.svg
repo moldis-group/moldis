@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cml="http://www.xml-cml.org/schema" width="214.641" height="180" x="0" y="0" font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="1"  stroke-linecap="round">
+<rect x="0%" y="0%" width="100%" height="100%" stroke-width="0" fill="rgb(255,255,255)"  />
+<line x1="75.1" y1="130.9" x2="98.5" y2="117.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="78.1" y1="136.1" x2="101.5" y2="122.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="123.4" y1="133.5" x2="100.0" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="100.0" y1="120.0" x2="100.0" y2="80.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="46.5" y1="56.6" x2="53.5" y2="68.7" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<polygon points="100.000000 80.000000 96.000000 53.200000 104.000000 53.200000 " stroke-width="1.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<line x1="100.0" y1="80.0" x2="73.0" y2="80.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="100.0" y1="80.0" x2="140.0" y2="80.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="163.4" y1="66.5" x2="140.0" y2="80.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="140.0" y1="80.0" x2="140.0" y2="53.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="140.0" y1="80.0" x2="153.5" y2="103.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<text x="54.000000" y="88.000000" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="59.358984" y="148.000000" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="154.000000" y="122.641016" fill="rgb(127,178,255)"  stroke="rgb(127,178,255)" stroke-width="1" font-size="16" >F</text>
+<text x="168.641016" y="68.000000" fill="rgb(127,178,255)"  stroke="rgb(127,178,255)" stroke-width="1" font-size="16" >F</text>
+<text x="134.000000" y="48.000000" fill="rgb(127,178,255)"  stroke="rgb(127,178,255)" stroke-width="1" font-size="16" >F</text>
+<text x="34.000000" y="53.358984" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="94.000000" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="128.641016" y="148.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<title>Molecule_23878_b3lyp.xyz - OBDepict</title>
+</svg>

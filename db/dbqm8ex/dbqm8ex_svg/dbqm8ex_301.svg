@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cml="http://www.xml-cml.org/schema" width="272.913" height="218.843" x="0" y="0" font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="1"  stroke-linecap="round">
+<rect x="0%" y="0%" width="100%" height="100%" stroke-width="0" fill="rgb(255,255,255)"  />
+<line x1="189.9" y1="52.6" x2="196.3" y2="76.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="155.1" y1="167.6" x2="167.6" y2="146.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="191.6" y1="112.8" x2="191.5" y2="114.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="195.7" y1="112.5" x2="195.5" y2="115.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="199.8" y1="112.2" x2="199.5" y2="116.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="203.9" y1="111.9" x2="203.5" y2="117.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="208.0" y1="111.6" x2="207.5" y2="118.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="212.1" y1="111.3" x2="211.5" y2="119.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="180.0" y1="167.6" x2="167.6" y2="146.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="196.3" y1="76.6" x2="186.5" y2="113.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="196.3" y1="76.6" x2="172.3" y2="70.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="196.3" y1="76.6" x2="220.4" y2="70.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="51.3" y1="125.7" x2="72.8" y2="113.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="148.6" y1="113.2" x2="72.8" y2="113.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="148.6" y1="113.2" x2="129.7" y2="80.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="72.8" y1="113.2" x2="72.8" y2="138.1" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="72.8" y1="113.2" x2="60.4" y2="91.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="108.1" y1="67.9" x2="129.7" y2="80.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="129.7" y1="80.4" x2="108.1" y2="92.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="129.7" y1="80.4" x2="142.1" y2="58.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="186.5" y1="113.2" x2="167.6" y2="146.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="167.6" y1="146.0" x2="148.6" y2="113.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="148.6" y1="113.2" x2="186.5" y2="113.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<text x="153.706390" y="74.795625" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="180.502015" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="226.913400" y="74.795625" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="218.274598" y="124.247257" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="142.607278" y="186.842620" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="180.502015" y="186.842620" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="90.842105" y="69.441837" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="142.607278" y="55.571400" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="90.842105" y="107.336574" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="66.817805" y="159.101747" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="47.870436" y="88.389205" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="34.000000" y="140.154378" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<title>Molecule_301_b3lyp.xyz - OBDepict</title>
+</svg>

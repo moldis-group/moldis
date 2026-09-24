@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cml="http://www.xml-cml.org/schema" width="229.482" height="288.336" x="0" y="0" font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="1"  stroke-linecap="round">
+<rect x="0%" y="0%" width="100%" height="100%" stroke-width="0" fill="rgb(255,255,255)"  />
+<line x1="173.0" y1="142.3" x2="150.4" y2="152.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="152.9" y1="127.8" x2="150.4" y2="152.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="134.9" y1="57.2" x2="139.0" y2="81.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="52.1" y1="155.4" x2="75.3" y2="146.5" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="115.8" y1="73.0" x2="139.0" y2="81.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="117.1" y1="138.0" x2="118.6" y2="138.5" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="120.7" y1="126.4" x2="123.4" y2="127.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="124.4" y1="114.9" x2="128.3" y2="116.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="128.0" y1="103.3" x2="133.1" y2="105.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="131.6" y1="91.8" x2="137.9" y2="94.1" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="135.3" y1="80.2" x2="142.8" y2="83.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="139.0" y1="81.6" x2="163.4" y2="77.5" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="112.6" y1="152.4" x2="75.3" y2="146.5" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="75.3" y1="146.5" x2="71.4" y2="171.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="75.3" y1="146.5" x2="66.4" y2="123.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="131.5" y1="210.6" x2="131.5" y2="235.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="180.8" y1="63.2" x2="184.9" y2="52.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="112.6" y1="152.4" x2="150.4" y2="152.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="150.4" y1="152.4" x2="158.0" y2="176.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="151.5" y1="196.0" x2="131.5" y2="210.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="131.5" y1="210.6" x2="111.0" y2="195.7" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="130.8" y1="201.2" x2="117.0" y2="191.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="104.9" y1="176.0" x2="112.6" y2="152.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<text x="170.267743" y="83.391113" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="156.033018" y="196.353387" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="94.907289" y="196.353387" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >N</text>
+<text x="63.358847" y="191.827510" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="34.000000" y="168.053184" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="55.730249" y="119.246245" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="126.759518" y="52.385382" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="97.619652" y="76.427609" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="183.482493" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="178.870760" y="145.058979" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="148.307895" y="122.853758" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="125.470153" y="256.336386" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<title>Molecule_9753_b3lyp.xyz - OBDepict</title>
+</svg>

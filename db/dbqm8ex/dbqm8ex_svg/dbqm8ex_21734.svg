@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cml="http://www.xml-cml.org/schema" width="192.604" height="178.634" x="0" y="0" font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="1"  stroke-linecap="round">
+<rect x="0%" y="0%" width="100%" height="100%" stroke-width="0" fill="rgb(255,255,255)"  />
+<line x1="60.1" y1="74.6" x2="46.5" y2="51.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="48.0" y1="95.8" x2="60.1" y2="74.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="60.1" y1="74.6" x2="97.1" y2="74.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="66.1" y1="81.8" x2="91.1" y2="81.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="97.1" y1="74.6" x2="97.1" y2="138.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="97.1" y1="138.6" x2="72.3" y2="138.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="91.1" y1="131.4" x2="74.6" y2="131.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="53.5" y1="127.4" x2="48.2" y2="118.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="97.1" y1="74.6" x2="121.1" y2="74.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="140.2" y1="85.0" x2="146.5" y2="95.7" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="135.2" y1="90.7" x2="139.1" y2="97.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="146.2" y1="117.4" x2="140.5" y2="127.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="121.1" y1="138.6" x2="97.1" y2="138.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<text x="35.600887" y="115.095145" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="128.098086" y="82.579026" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >N</text>
+<text x="146.604187" y="114.118218" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >N</text>
+<text x="128.098086" y="146.634336" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="54.106987" y="146.634336" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >N</text>
+<text x="34.000000" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<title>Molecule_21734_b3lyp.xyz - OBDepict</title>
+</svg>

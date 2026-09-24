@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cml="http://www.xml-cml.org/schema" width="276.211" height="229.322" x="0" y="0" font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="1"  stroke-linecap="round">
+<rect x="0%" y="0%" width="100%" height="100%" stroke-width="0" fill="rgb(255,255,255)"  />
+<line x1="192.0" y1="83.4" x2="170.2" y2="96.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="192.0" y1="145.9" x2="170.2" y2="133.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="170.2" y1="96.0" x2="225.0" y2="127.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="170.2" y1="133.3" x2="192.0" y2="120.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<polygon points="137.855672 77.283102 139.183132 51.481887 147.012584 53.124960 " stroke-width="1.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<polygon points="137.856622 152.039023 147.013257 176.197270 139.183787 177.840254 " stroke-width="1.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<line x1="51.3" y1="127.3" x2="73.1" y2="114.7" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<polygon points="105.483359 95.974363 101.483035 70.450604 109.483035 70.450503 " stroke-width="1.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<polygon points="105.483834 133.348585 109.484158 158.872344 101.484158 158.872445 " stroke-width="1.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<line x1="73.1" y1="114.7" x2="51.3" y2="102.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="73.1" y1="114.7" x2="105.5" y2="96.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="105.5" y1="96.0" x2="105.5" y2="133.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="105.5" y1="133.3" x2="73.1" y2="114.7" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="137.9" y1="152.0" x2="126.7" y2="126.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="126.7" y1="102.8" x2="137.9" y2="77.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="137.9" y1="77.3" x2="170.2" y2="96.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="170.2" y1="96.0" x2="170.2" y2="133.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="170.2" y1="133.3" x2="137.9" y2="152.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="105.5" y1="96.0" x2="137.9" y2="77.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="137.9" y1="152.0" x2="105.5" y2="133.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<text x="115.445582" y="122.657533" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="34.000000" y="103.542585" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="34.000486" y="141.782026" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="99.482875" y="65.879125" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="99.484318" y="179.443823" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="139.680354" y="197.322215" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="197.220742" y="160.394753" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="197.219896" y="122.299306" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="197.219784" y="84.925712" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="230.211349" y="142.068779" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="139.679830" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<title>Molecule_19719_b3lyp.xyz - OBDepict</title>
+</svg>

@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cml="http://www.xml-cml.org/schema" width="271.931" height="241.751" x="0" y="0" font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="1"  stroke-linecap="round">
+<rect x="0%" y="0%" width="100%" height="100%" stroke-width="0" fill="rgb(255,255,255)"  />
+<line x1="50.8" y1="142.2" x2="55.9" y2="152.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="47.4" y1="185.0" x2="54.1" y2="175.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="74.4" y1="165.6" x2="99.1" y2="167.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="110.7" y1="51.3" x2="123.1" y2="72.7" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="123.1" y1="72.7" x2="98.3" y2="72.7" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="134.1" y1="118.3" x2="132.8" y2="117.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="127.8" y1="128.6" x2="125.4" y2="127.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="121.4" y1="139.0" x2="118.0" y2="136.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="115.1" y1="149.3" x2="110.6" y2="146.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="108.7" y1="159.6" x2="103.2" y2="155.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="102.4" y1="169.9" x2="95.8" y2="165.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="101.8" y1="166.3" x2="112.4" y2="188.7" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="96.4" y1="168.9" x2="107.0" y2="191.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="142.0" y1="105.4" x2="168.7" y2="132.1" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="222.7" y1="104.8" x2="205.2" y2="122.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="168.7" y1="132.1" x2="205.2" y2="122.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="168.7" y1="132.1" x2="151.2" y2="149.7" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="168.7" y1="132.1" x2="175.1" y2="156.1" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="198.8" y1="98.4" x2="205.2" y2="122.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="205.2" y1="122.4" x2="222.7" y2="139.9" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="142.0" y1="105.4" x2="154.4" y2="84.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="147.9" y1="72.7" x2="123.1" y2="72.7" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="123.1" y1="72.7" x2="142.0" y2="105.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<text x="154.903305" y="80.716515" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="55.452805" y="172.593409" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >N</text>
+<text x="109.312001" y="209.750757" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="189.440261" y="93.877814" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="225.930793" y="103.655422" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="225.930793" y="157.081268" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="172.504947" y="176.636485" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="136.014416" y="166.858876" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="98.236638" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="79.347749" y="80.716515" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="39.249610" y="138.466924" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="34.000000" y="203.689030" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<title>Molecule_10711_b3lyp.xyz - OBDepict</title>
+</svg>
