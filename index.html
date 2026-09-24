@@ -4,6 +4,7 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MolDis</title>
 <link rel="icon" href="favicon.ico">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <style>
   :root {
     font-family:Arial,sans-serif;
@@ -99,13 +100,16 @@
     width:100%;
     height:600px;
     border:0;
+    overflow:hidden;
     background:#fff;
   }
   .description {
     padding:25px 30px;
-    font-family:Arial,sans-serif;
-    line-height:1.6;
+    font-family:"Raleway",Arial,sans-serif;
+    font-weight:100;
+    line-height:1.5;
     font-size:16px;
+    color:#000;
   }
   .description video {
     display:block;
@@ -178,7 +182,7 @@
     </nav>
   </header>
   <main class="layout">
-    <iframe class="viewer" src="molecules-master/examples/index.html" title="SMILES molecule viewer" loading="lazy">
+    <iframe class="viewer" src="molecules-master/examples/index.html" title="SMILES molecule viewer" scrolling="no" loading="lazy">
   </iframe>
   <section class="description">
     <p>The MolDis big data analytics platform developed at the Tata Institute of Fundamental Research's (TIFR's) Centre for Interdisciplinary Sciences aims to provide free access to computed datasets of molecular properties. Presently the datasets are classified according to their domains of application. This project is funded by TIFR, a National Centre of the Government of India under the Department of Atomic Energy.</p>
