@@ -1,2 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway');
-:root{font-family:Raleway,Arial,sans-serif;background:#fff;color:#171717}*{box-sizing:border-box}body{margin:0}header,main,footer{max-width:1331px;margin:auto;padding:20px}header{border-top:60px solid #f5f5ef}header a{color:#900}h1{font-size:1.7rem;margin:14px 0 6px}header p{margin:0 0 12px}.controls{background:#f5f5ef;padding:18px}.toolbar{display:flex;gap:14px;align-items:end;flex-wrap:wrap}.toolbar label{display:grid;gap:5px}.toolbar input,.toolbar select,.filters input{padding:7px;border:1px solid #aaa;border-radius:3px}.filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:20px}.filter{display:grid;gap:6px;font-size:14px}.range{display:flex;gap:6px}.range input{width:50%;min-width:0}button{padding:8px 14px;border:0;background:#900;color:#fff;cursor:pointer;border-radius:3px}button:disabled{opacity:.45;cursor:default}#status{margin:18px 0}.grid{display:grid;grid-template-columns:minmax(0,1fr) 350px;gap:18px}.results{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:9px;border-bottom:1px solid #ddd}th{background:#f5f5ef}tbody tr{cursor:pointer}tbody tr:hover,tbody tr.selected{background:#f7eae8}.pagination{display:flex;gap:12px;align-items:center;margin:15px 0}aside{background:#fafaf7;padding:18px;min-width:0}aside h2{margin-top:0}aside dl{display:grid;grid-template-columns:1fr auto;gap:4px 10px;font-size:13px}aside dt,aside dd{border-bottom:1px solid #e6e6e0;margin:0;padding:4px 0}figure{margin:16px 0}figure img{max-width:100%;max-height:280px;background:#fff}figcaption{font-size:13px;margin:4px 0}footer{font-size:13px;color:#555}a{color:#900}@media(max-width:900px){.grid{grid-template-columns:1fr}aside{grid-row:1}}
+
+:root { font-family: Raleway, Arial, sans-serif; background: #fff; color: #171717; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+header, main, footer { max-width: 1331px; margin: auto; padding: 20px; }
+header { border-top: 60px solid #f5f5ef; }
+header a, a { color: #900; }
+h1 { font-size: 1.7rem; margin: 14px 0 6px; }
+header p { margin: 0 0 12px; }
+.controls { background: #f5f5ef; padding: 18px; }
+.toolbar { display: flex; gap: 14px; align-items: end; flex-wrap: wrap; }
+.toolbar label { display: grid; gap: 5px; }
+.toolbar input, .toolbar select, .filters input {
+  padding: 7px; border: 1px solid #aaa; border-radius: 3px;
+}
+.filter-title { font-size: 1rem; margin: 22px 0 12px; }
+.filters { display: flex; flex-direction: column; gap: 9px; max-width: 700px; }
+.filter { display: grid; grid-template-columns: minmax(215px, 1fr) minmax(180px, 1fr);
+  gap: 12px; align-items: center; font-size: 14px; }
+.range { display: flex; gap: 6px; }
+.range input { width: 50%; min-width: 0; }
+button { padding: 8px 14px; border: 0; background: #900; color: #fff;
+  cursor: pointer; border-radius: 3px; }
+button:disabled { opacity: .45; cursor: default; }
+#status { margin: 18px 0; }
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) 380px; gap: 18px; }
+.results { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 9px; border-bottom: 1px solid #ddd; }
+th { background: #f5f5ef; }
+tbody tr { cursor: pointer; }
+tbody tr:hover, tbody tr.selected { background: #f7eae8; }
+.pagination { display: flex; gap: 12px; align-items: center; margin: 15px 0; }
+aside { background: #fafaf7; padding: 18px; min-width: 0; }
+aside h2 { margin-top: 0; }
+aside dl { display: grid; grid-template-columns: 1fr auto; gap: 4px 10px; font-size: 13px; }
+aside dt, aside dd { border-bottom: 1px solid #e6e6e0; margin: 0; padding: 4px 0; }
+.viewer3d { height: 340px; width: 100%; position: relative; border: 1px solid #ccc;
+  background: white; margin-top: 10px; }
+.viewer-status { font-size: 13px; }
+figure { margin: 16px 0; }
+figure img { max-width: 100%; max-height: 280px; background: #fff; }
+figcaption { font-size: 13px; margin: 4px 0; }
+footer { font-size: 13px; color: #555; }
+@media (max-width: 900px) { .grid { grid-template-columns: 1fr; } aside { grid-row: 1; } }
+@media (max-width: 600px) { .filter { grid-template-columns: 1fr; gap: 4px; } }

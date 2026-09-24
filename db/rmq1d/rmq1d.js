@@ -16,6 +16,7 @@ const fields = [
 const $ = id => document.getElementById(id);
 const state = {data:[],matches:[],page:0,selected:null};
 const pageSize = 25;
+let selectionToken = 0;
 const numeric = value => value === '' || value == null ? NaN : Number(value);
 const display = value => value === '' || value == null ? '—' : value;
 function parseTSV(text) {
@@ -84,14 +85,33 @@ function addFigure(parent,path,caption) {
   img.src=path;link.append(img);figure.append(link);
   const label=document.createElement('figcaption');label.textContent=caption;figure.append(label);parent.append(figure);
 }
-function show(row) {
+async function show(row) {
+  const token = ++selectionToken;
   state.selected=row.Index;paint();
   const el=$('detail');el.replaceChildren();const h=document.createElement('h2');h.textContent=`RMQ1D ${row.Index}`;el.append(h);
   const dl=document.createElement('dl');for(const [key,label] of fields){const dt=document.createElement('dt');dt.textContent=label;const dd=document.createElement('dd');dd.textContent=display(row[key]);dl.append(dt,dd)}el.append(dl);
   // The filename is constructed from the numeric TSV index, never from arbitrary input.
   if(!/^\d+$/.test(row.Index))return;
   const stem=`rmq1d_${row.Index}`;
-  const xyz=document.createElement('a');xyz.href=`rmq1d_xyz/${stem}.xyz`;xyz.download=`${stem}.xyz`;xyz.textContent='Download XYZ coordinates';el.append(xyz);
+  const xyzPath=`rmq1d_xyz/${stem}.xyz`;
+  const xyz=document.createElement('a');xyz.href=xyzPath;xyz.download=`${stem}.xyz`;xyz.textContent='Download XYZ coordinates';el.append(xyz);
+  const heading=document.createElement('h3');heading.textContent='3D structure';el.append(heading);
+  const viewerBox=document.createElement('div');viewerBox.className='viewer3d';viewerBox.id='viewer3d';viewerBox.setAttribute('aria-label',`3D structure of RMQ1D ${row.Index}`);el.append(viewerBox);
+  const viewerStatus=document.createElement('p');viewerStatus.className='viewer-status';viewerStatus.textContent='Loading XYZ structure…';el.append(viewerStatus);
+  try {
+    if(typeof $3Dmol==='undefined')throw Error('3Dmol could not load. Check the network connection.');
+    const response=await fetch(xyzPath);
+    if(!response.ok)throw Error(`HTTP ${response.status}`);
+    const xyzText=await response.text();
+    if(token!==selectionToken)return;
+    const viewer=$3Dmol.createViewer(viewerBox,{backgroundColor:'white'});
+    viewer.addModel(xyzText,'xyz');
+    viewer.setStyle({},{stick:{},sphere:{scale:0.3}});
+    viewer.zoomTo();viewer.render();
+    viewerStatus.textContent='Drag to rotate; scroll to zoom.';
+  } catch(error) {
+    if(token===selectionToken)viewerStatus.textContent=`Could not display ${stem}.xyz: ${error.message}`;
+  }
   addFigure(el,`rmq1d_svg/${stem}.svg`,'2D unit cell components');
   addFigure(el,`rmq1d_svg/${stem}_BS.svg`,'Electronic band structure');
   addFigure(el,`rmq1d_svg/${stem}_phonon_BS.svg`,'Phonon band structure');
