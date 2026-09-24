@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cml="http://www.xml-cml.org/schema" width="322.494" height="220.019" x="0" y="0" font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="1"  stroke-linecap="round">
+<rect x="0%" y="0%" width="100%" height="100%" stroke-width="0" fill="rgb(255,255,255)"  />
+<polygon points="213.19 160.01 238.41 169.952 234.41 176.88 " stroke-width="1" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<line x1="213.2" y1="160.0" x2="178.6" y2="180.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="178.6" y1="180.0" x2="143.9" y2="160.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="177.0" y1="170.8" x2="152.7" y2="156.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="143.9" y1="160.0" x2="143.9" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="143.9" y1="120.0" x2="178.6" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="178.6" y1="100.0" x2="213.2" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="213.2" y1="120.0" x2="213.2" y2="160.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="109.3" y1="100.0" x2="74.7" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="74.7" y1="120.0" x2="74.7" y2="160.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="74.7" y1="160.0" x2="109.3" y2="180.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="109.3" y1="180.0" x2="143.9" y2="160.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="143.9" y1="120.0" x2="109.3" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="74.6" y1="40.0" x2="40.0" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="40.0" y1="60.0" x2="40.0" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="40.0" y1="100.0" x2="74.7" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="109.3" y1="100.0" x2="109.3" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="109.3" y1="60.0" x2="74.6" y2="40.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="247.8" y1="60.0" x2="247.8" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="247.8" y1="100.0" x2="213.2" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="178.6" y1="100.0" x2="178.6" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="178.6" y1="60.0" x2="213.2" y2="40.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="213.2" y1="40.0" x2="247.8" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="282.5" y1="133.0" x2="282.5" y2="160.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="282.5" y1="160.0" x2="259.3" y2="173.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="273.7" y1="156.8" x2="257.4" y2="166.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="236.6" y1="173.5" x2="213.2" y2="160.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="247.8" y1="100.0" x2="271.2" y2="113.5" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="109.3" y1="60.0" x2="143.9" y2="40.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="143.9" y1="40.0" x2="178.6" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<text x="241.846235" y="188.019006" fill="rgb(255,181,181)"  stroke="rgb(255,181,181)" stroke-width="1" font-size="16" >B</text>
+<text x="241.846235" y="204.019006" fill="rgb(255,181,181)"  stroke="rgb(255,181,181)" stroke-width="1" font-size="16" >H</text>
+<text x="276.494031" y="128.007264" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >NH</text>
+<text font-size="18.000000" fill ="black" font-family="sans-serif"
+x="10.000000" y="20.000000" >BNPAH_000038_PAH30   C20_H12_N01_B01  -848.51946245     0.00000000     3.26276000  4384.00274821     6.98635308   190.10835067 18342.66749851    30.44446353     0.04851634     1.32019688   127.37963541    -4.65950000    -0.17123347  -107.45062346  -449.57340857    -2.63560000    -0.09685651   -60.77838034  -254.29674335     2.02390000     0.07437695    46.67224312   195.27666522</text>
+<title>BNPAH_000038_PAH30   C20_H12_N01_B01  -848.51946245     0.00000000     3.26276000  4384.00274821     6.98635308   190.10835067 18342.66749851    30.44446353     0.04851634     1.32019688   127.37963541    -4.65950000    -0.17123347  -107.45062346  -449.57340857    -2.63560000    -0.09685651   -60.77838034  -254.29674335     2.02390000     0.07437695    46.67224312   195.27666522 - OBDepict</title>
+</svg>

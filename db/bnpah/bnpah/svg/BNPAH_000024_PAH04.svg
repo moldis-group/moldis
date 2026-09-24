@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cml="http://www.xml-cml.org/schema" width="253.205" height="280" x="0" y="0" font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="1"  stroke-linecap="round">
+<rect x="0%" y="0%" width="100%" height="100%" stroke-width="0" fill="rgb(255,255,255)"  />
+<line x1="73.8" y1="152.0" x2="75.4" y2="152.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="73.2" y1="145.6" x2="76.1" y2="145.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="72.6" y1="139.2" x2="76.7" y2="139.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="71.9" y1="132.8" x2="77.4" y2="132.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="71.3" y1="126.4" x2="78.0" y2="126.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="70.6" y1="120.0" x2="78.6" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="74.6" y1="40.0" x2="109.3" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="76.2" y1="49.2" x2="100.5" y2="63.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="109.3" y1="60.0" x2="109.3" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="109.3" y1="100.0" x2="74.6" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="100.5" y1="96.8" x2="76.2" y2="110.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="74.6" y1="120.0" x2="51.3" y2="106.5" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="40.0" y1="86.8" x2="40.0" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="47.2" y1="84.8" x2="47.2" y2="66.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="40.0" y1="60.0" x2="74.6" y2="40.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="74.6" y1="160.0" x2="109.3" y2="180.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="109.3" y1="180.0" x2="143.9" y2="160.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="110.9" y1="170.8" x2="135.1" y2="156.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="143.9" y1="160.0" x2="143.9" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="143.9" y1="120.0" x2="109.3" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="74.6" y1="120.0" x2="74.6" y2="160.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="213.2" y1="160.0" x2="213.2" y2="133.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="201.9" y1="113.5" x2="178.6" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="178.6" y1="100.0" x2="143.9" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="177.0" y1="109.2" x2="152.7" y2="123.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="143.9" y1="160.0" x2="178.6" y2="180.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="178.6" y1="180.0" x2="213.2" y2="160.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="180.2" y1="170.8" x2="204.4" y2="156.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="40.0" y1="220.0" x2="74.6" y2="240.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="74.6" y1="240.0" x2="109.3" y2="220.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="76.2" y1="230.8" x2="100.5" y2="216.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="109.3" y1="220.0" x2="109.3" y2="180.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="74.6" y1="160.0" x2="40.0" y2="180.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="40.0" y1="180.0" x2="40.0" y2="220.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="47.2" y1="186.0" x2="47.2" y2="214.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<text x="22.000000" y="108.000000" fill="rgb(255,181,181)"  stroke="rgb(255,181,181)" stroke-width="1" font-size="16" >HB</text>
+<text x="207.205081" y="128.000000" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >NH</text>
+<text font-size="18.000000" fill ="black" font-family="sans-serif"
+x="10.000000" y="20.000000" >BNPAH_000024_PAH04   C16_H12_N01_B01  -696.09948139     0.00000000    11.17014000  3663.44163080     5.83806585   158.86186351 15327.83978327    30.52868026     0.04865055     1.32384886   127.73199821    -4.17690000    -0.15349825   -96.32160299  -403.00958692    -2.80600000    -0.10311860   -64.70789772  -270.73784407     1.37090000     0.05037965    31.61370527   132.27174285</text>
+<title>BNPAH_000024_PAH04   C16_H12_N01_B01  -696.09948139     0.00000000    11.17014000  3663.44163080     5.83806585   158.86186351 15327.83978327    30.52868026     0.04865055     1.32384886   127.73199821    -4.17690000    -0.15349825   -96.32160299  -403.00958692    -2.80600000    -0.10311860   -64.70789772  -270.73784407     1.37090000     0.05037965    31.61370527   132.27174285 - OBDepict</title>
+</svg>

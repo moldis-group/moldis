@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cml="http://www.xml-cml.org/schema" width="357.128" height="160" x="0" y="0" font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="1"  stroke-linecap="round">
+<rect x="0%" y="0%" width="100%" height="100%" stroke-width="0" fill="rgb(255,255,255)"  />
+<line x1="109.3" y1="100.0" x2="74.6" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="100.5" y1="96.8" x2="76.2" y2="110.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="74.6" y1="120.0" x2="40.0" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="40.0" y1="100.0" x2="40.0" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="47.2" y1="94.0" x2="47.2" y2="66.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="40.0" y1="60.0" x2="74.6" y2="40.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="74.6" y1="40.0" x2="109.3" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="76.2" y1="49.2" x2="100.5" y2="63.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="109.3" y1="60.0" x2="109.3" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="178.6" y1="60.0" x2="178.6" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="178.6" y1="100.0" x2="143.9" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="169.8" y1="96.8" x2="145.5" y2="110.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="143.9" y1="120.0" x2="109.3" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="109.3" y1="60.0" x2="143.9" y2="40.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="143.9" y1="40.0" x2="178.6" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="145.5" y1="49.2" x2="169.8" y2="63.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="247.8" y1="60.0" x2="247.8" y2="87.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="236.4" y1="106.6" x2="213.2" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="231.1" y1="101.4" x2="214.8" y2="110.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="213.2" y1="120.0" x2="178.6" y2="100.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="178.6" y1="60.0" x2="213.2" y2="40.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="213.2" y1="40.0" x2="247.8" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="214.8" y1="49.2" x2="239.0" y2="63.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="317.1" y1="60.0" x2="317.1" y2="87.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="305.9" y1="106.5" x2="282.5" y2="120.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="282.5" y1="120.0" x2="259.1" y2="106.5" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="247.8" y1="60.0" x2="282.5" y2="40.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="282.5" y1="40.0" x2="317.1" y2="60.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="284.1" y1="49.2" x2="308.3" y2="63.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<text x="311.128129" y="108.000000" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >NH</text>
+<text x="241.846097" y="108.000000" fill="rgb(255,181,181)"  stroke="rgb(255,181,181)" stroke-width="1" font-size="16" >B</text>
+<text font-size="18.000000" fill ="black" font-family="sans-serif"
+x="10.000000" y="20.000000" >BNPAH_000035_PAH05   C16_H12_N01_B01  -696.12354810     0.00400000     4.86975000  3678.54372630     5.86213257   159.51675235 15391.02695084    30.65453105     0.04885110     1.32930627   128.25855791    -4.43510000    -0.16298692  -102.27583649  -427.92209987    -2.56420000    -0.09423261   -59.13185721  -247.40769058     1.87090000     0.06875431    43.14397928   180.51440929</text>
+<title>BNPAH_000035_PAH05   C16_H12_N01_B01  -696.12354810     0.00400000     4.86975000  3678.54372630     5.86213257   159.51675235 15391.02695084    30.65453105     0.04885110     1.32930627   128.25855791    -4.43510000    -0.16298692  -102.27583649  -427.92209987    -2.56420000    -0.09423261   -59.13185721  -247.40769058     1.87090000     0.06875431    43.14397928   180.51440929 - OBDepict</title>
+</svg>
