@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>MolDis</title>
+<title>Developers | MolDis</title>
 <link rel="icon" href="favicon.ico">
 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 <style>
@@ -89,34 +89,18 @@
   nav a:hover {
     background:#00004d;
   }
-  .layout {
+  .developers-panel {
     width:calc(100% - 40px);
     max-width:1291px;
     padding:8px 0 12px;
     background:#f5f5ef;
-    display:grid;
-    grid-template-columns:minmax(300px,531px) minmax(350px,800px);
-    gap:0;
   }
-  .viewer {
-    width:100%;
-    height:600px;
-    border:0;
-    overflow:hidden;
-    background:#fff;
-  }
-  .description {
-    padding:25px 30px;
-    font-family:"Raleway",Arial,sans-serif;
-    font-weight:100;
-    line-height:1.5;
-    font-size:16px;
-    color:#000;
-  }
-  .description video {
+  .developers-content {
     display:block;
-    max-width:100%;
-    margin:32px auto;
+    width:100%;
+    height:500px;
+    border:0;
+    background:#f5f5ef;
   }
   footer {
     display:flex;
@@ -153,15 +137,6 @@
     height:auto;
     min-height:60px;
   }
-  .layout {
-    grid-template-columns:1fr;
-  }
-  .viewer {
-    height:600px;
-  }
-  .description {
-    padding:20px 0;
-  }
   .branding .moldis-logo {
     max-width:100%;
     height:auto;
@@ -197,18 +172,13 @@
     </div>
     <nav aria-label="Main navigation">
       <a href="./">Home</a>
-      <a href="html/datasets.html">Datasets</a>
-      <a href="html/developers.html">Developers</a>
-      <a href="html/lab.html">Lab</a>
+      <a href="datasets.html">Datasets</a>
+      <a href="developers.html">Developers</a>
+      <a href="lab.html">Lab</a>
     </nav>
   </header>
-  <main class="layout">
-    <iframe class="viewer" src="molecules-master/examples/index.html" title="SMILES molecule viewer" scrolling="no" loading="lazy">
-  </iframe>
-  <section class="description">
-    <p>The MolDis big data analytics platform developed at the Tata Institute of Fundamental Research's (TIFR's) Centre for Interdisciplinary Sciences aims to provide free access to computed datasets of molecular properties. Presently the datasets are classified according to their domains of application. This project is funded by TIFR, a National Centre of the Government of India under the Department of Atomic Energy.</p>
-    <video controls preload="metadata" width="540" src="video/moldis_final_credit_540.mp4">Your browser does not support video playback.</video>
-  </section>
+  <main class="developers-panel">
+  <iframe class="developers-content" src="developers_content.html" title="MolDis developers" scrolling="yes"></iframe>
 </main>
 <footer>
   <a class="follow-link" href="https://twitter.com/raghurama123" target="_blank" rel="noopener">Follow @raghurama123</a>
