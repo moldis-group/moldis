@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QM9 134k | MolDis</title>
+  <link rel="stylesheet" href="db134k.css">
+  <script src="https://3Dmol.org/build/3Dmol-min.js" defer></script>
+  <script src="db134k.js" defer></script>
+</head>
+<body>
+  <header>
+    <a href="../../datasets.html">← MolDis datasets</a>
+    <h1>QM9 · 134k dataset</h1>
+    <p>Search the 130,831 curated QM9 molecules and inspect their structures and properties.</p>
+  </header>
+  <main>
+    <section class="query" aria-label="Search and filter molecules">
+      <div class="toolbar">
+        <label>Filename <input id="search" type="search" placeholder="e.g. 000001"></label>
+        <label>Sort by <select id="sort"></select></label>
+        <label>Order <select id="order"><option value="asc">Ascending</option><option value="desc">Descending</option></select></label>
+        <button id="reset" type="button">Reset filters</button>
+      </div>
+      <h2>Atomic composition</h2>
+      <div id="composition" class="composition"></div>
+      <h2>Property ranges</h2>
+      <div id="filters" class="filters"></div>
+    </section>
+    <p id="status" role="status">Loading TSV…</p>
+    <div class="layout">
+      <section class="results" aria-label="Matching molecules">
+        <table><thead><tr><th>Filename</th><th>H</th><th>C</th><th>N</th><th>O</th><th>F</th><th>Dipole (D)</th><th>Gap (eV)</th></tr></thead><tbody id="rows"></tbody></table>
+        <div class="pagination"><button id="prev" type="button">Previous</button><span id="page"></span><button id="next" type="button">Next</button></div>
+      </section>
+      <aside id="detail" aria-live="polite"><p>Select a molecule to see all properties and structure.</p></aside>
+    </div>
+  </main>
+  <footer>QM9 134k · MolDis</footer>
+</body>
+</html>
