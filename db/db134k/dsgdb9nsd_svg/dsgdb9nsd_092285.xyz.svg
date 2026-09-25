@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cml="http://www.xml-cml.org/schema" width="280.93" height="264.207" x="0" y="0" font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="1"  stroke-linecap="round">
+<rect x="0%" y="0%" width="100%" height="100%" stroke-width="0" fill="rgb(255,255,255)"  />
+<line x1="229.7" y1="121.1" x2="223.1" y2="124.9" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="198.8" y1="131.4" x2="178.2" y2="131.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<polygon points="178.213738 131.415396 193.934872 150.304360 187.034970 154.352983 " stroke-width="1.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<line x1="172.9" y1="181.3" x2="161.2" y2="161.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="161.2" y1="161.3" x2="131.8" y2="212.9" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<polygon points="127.207209 161.300998 131.207209 185.548617 123.207209 185.548617 " stroke-width="1.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<line x1="172.7" y1="82.3" x2="161.2" y2="102.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="161.2" y1="102.4" x2="131.2" y2="51.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<polygon points="127.207209 102.427689 123.207209 78.180070 131.207209 78.180070 " stroke-width="1.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<line x1="76.2" y1="132.3" x2="53.0" y2="132.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="178.2" y1="131.4" x2="161.2" y2="161.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="161.2" y1="161.3" x2="127.2" y2="161.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="127.2" y1="161.3" x2="127.2" y2="102.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="127.2" y1="102.4" x2="161.2" y2="102.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="161.2" y1="102.4" x2="178.2" y2="131.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="86.8" y1="113.7" x2="76.2" y2="132.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="76.2" y1="132.3" x2="87.6" y2="151.7" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="85.4" y1="133.8" x2="92.5" y2="145.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="106.2" y1="161.3" x2="127.2" y2="161.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="127.2" y1="102.4" x2="106.2" y2="102.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<text x="205.823149" y="139.415396" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="87.199455" y="110.427689" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="87.199455" y="169.300998" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >N</text>
+<text x="234.929754" y="122.610690" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="190.528936" y="170.629240" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="173.189681" y="79.022384" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="118.574363" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="121.207209" y="74.237212" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="34.000000" y="140.313291" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="121.207209" y="205.491474" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="119.402511" y="232.207288" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="173.519958" y="200.514842" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text font-size="18.000000" fill ="black" font-family="sans-serif"
+x="10.000000" y="20.000000" ></text>
+<title> - OBDepict</title>
+</svg>

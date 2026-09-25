@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cml="http://www.xml-cml.org/schema" width="258.905" height="218.251" x="0" y="0" font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="1"  stroke-linecap="round">
+<rect x="0%" y="0%" width="100%" height="100%" stroke-width="0" fill="rgb(255,255,255)"  />
+<line x1="141.6" y1="124.5" x2="140.3" y2="125.5" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="144.8" y1="127.6" x2="142.5" y2="129.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="147.9" y1="130.7" x2="144.6" y2="133.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="151.1" y1="133.8" x2="146.8" y2="137.1" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="154.3" y1="136.9" x2="149.0" y2="141.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="157.5" y1="140.0" x2="151.1" y2="144.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="116.8" y1="141.6" x2="115.8" y2="140.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="113.7" y1="144.8" x2="111.9" y2="142.5" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="110.6" y1="148.0" x2="108.1" y2="144.7" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="107.5" y1="151.2" x2="104.2" y2="146.9" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="104.5" y1="154.4" x2="100.3" y2="149.1" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="101.4" y1="157.6" x2="96.5" y2="151.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="206.0" y1="105.6" x2="137.6" y2="96.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="127.9" y1="147.7" x2="120.6" y2="120.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="100.2" y1="165.4" x2="96.6" y2="137.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="137.6" y1="96.6" x2="154.6" y2="74.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="96.6" y1="137.6" x2="74.4" y2="154.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="120.6" y1="120.6" x2="147.7" y2="127.9" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<polygon points="120.612199 79.607499 127.430200 52.694885 134.821236 55.756352 " stroke-width="1.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<polygon points="79.607499 120.612199 55.756352 134.821236 52.694885 127.430200 " stroke-width="1.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<line x1="79.6" y1="79.6" x2="52.6" y2="72.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="79.6" y1="79.6" x2="72.4" y2="52.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="137.6" y1="120.6" x2="165.4" y2="117.0" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="166.1" y1="120.0" x2="120.6" y2="137.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="120.6" y1="137.6" x2="137.6" y2="120.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="120.6" y1="120.6" x2="79.6" y2="120.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="79.6" y1="120.6" x2="79.6" y2="79.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="79.6" y1="79.6" x2="120.6" y2="79.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="120.6" y1="79.6" x2="120.6" y2="120.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="120.6" y1="79.6" x2="137.6" y2="96.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="137.6" y1="96.6" x2="137.6" y2="120.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="120.6" y1="137.6" x2="96.6" y2="137.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="96.6" y1="137.6" x2="79.6" y2="120.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<text x="172.250801" y="123.260012" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="154.219698" y="139.224996" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="125.224996" y="168.219698" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="35.724096" y="144.304018" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="34.000000" y="76.994702" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="62.994702" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="130.304018" y="49.724096" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="156.558982" y="72.060986" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="212.904700" y="115.296577" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="156.558982" y="161.143415" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="82.233722" y="170.756784" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="95.944389" y="186.250801" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="58.060986" y="170.558982" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text font-size="18.000000" fill ="black" font-family="sans-serif"
+x="10.000000" y="20.000000" ></text>
+<title> - OBDepict</title>
+</svg>

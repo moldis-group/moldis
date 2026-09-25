@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cml="http://www.xml-cml.org/schema" width="289.411" height="267.36" x="0" y="0" font-family="sans-serif" stroke="rgb(0,0,0)" stroke-width="1"  stroke-linecap="round">
+<rect x="0%" y="0%" width="100%" height="100%" stroke-width="0" fill="rgb(255,255,255)"  />
+<line x1="236.5" y1="160.9" x2="179.4" y2="153.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="200.9" y1="159.2" x2="179.4" y2="153.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="125.1" y1="52.7" x2="137.6" y2="108.9" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="154.6" y1="157.5" x2="153.1" y2="158.1" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="156.6" y1="160.7" x2="153.9" y2="161.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="158.6" y1="164.0" x2="154.8" y2="165.6" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="160.6" y1="167.2" x2="155.6" y2="169.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="162.7" y1="170.5" x2="156.4" y2="173.1" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="164.7" y1="173.8" x2="157.3" y2="176.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="137.6" y1="108.9" x2="127.3" y2="89.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<polygon points="141.875563 143.339348 118.022710 145.988215 118.477301 138.001142 " stroke-width="1.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<line x1="52.7" y1="200.9" x2="70.5" y2="199.2" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="53.2" y1="206.8" x2="71.1" y2="205.1" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<polygon points="121.194810 166.328116 73.102013 205.415082 68.467592 198.894181 " stroke-width="1.000000" fill="rgb(0,0,0)"  stroke="rgb(0,0,0)" />
+<line x1="121.2" y1="166.3" x2="92.7" y2="178.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="70.8" y1="202.2" x2="81.2" y2="216.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="92.7" y1="178.3" x2="78.4" y2="167.5" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="90.1" y1="181.6" x2="75.9" y2="170.8" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="95.2" y1="175.0" x2="81.0" y2="164.1" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="121.2" y1="166.3" x2="152.0" y2="153.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="152.0" y1="153.4" x2="179.4" y2="153.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="179.4" y1="153.4" x2="141.9" y2="143.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="141.9" y1="143.3" x2="121.2" y2="166.3" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="137.6" y1="108.9" x2="152.0" y2="153.4" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<line x1="141.9" y1="143.3" x2="137.6" y2="108.9" stroke="rgb(0,0,0)"  stroke-width="1.0"/>
+<text x="34.000000" y="213.065465" fill="rgb(255,12,12)"  stroke="rgb(255,12,12)" stroke-width="1" font-size="16" >O</text>
+<text x="62.061092" y="167.594688" fill="rgb(12,12,255)"  stroke="rgb(12,12,255)" stroke-width="1" font-size="16" >N</text>
+<text x="82.698060" y="235.359635" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="100.613536" y="149.332379" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="243.410766" y="170.600217" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="207.492979" y="170.521429" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="159.413941" y="194.065431" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="115.242372" y="85.636381" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text x="116.223690" y="48.000000" fill="rgb(191,191,191)"  stroke="rgb(191,191,191)" stroke-width="1" font-size="16" >H</text>
+<text font-size="18.000000" fill ="black" font-family="sans-serif"
+x="10.000000" y="20.000000" ></text>
+<title> - OBDepict</title>
+</svg>
