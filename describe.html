@@ -16,6 +16,9 @@ if(name=="link5")
 {window.open("https://iopscience.iop.org/article/10.1088/2632-2153/abe347");}
 if(name=="link6")
 {window.open("https://doi.org/10.1039/D1DD00031D");}
+if(name=="link7")
+{window.open("https://doi.org/10.1039/d4cp00886c");}
+
 else if(name=="reg1")
 {window.open("./reg_mc.php","_top");}
 
@@ -33,7 +36,7 @@ else if(name=="dset4")
 else if(name=="dset5")
 {window.open("./db/bigqm7w/");}
 else if(name=="dset6")
-{window.open("./db/bigqm7w/");}
+{window.open("./db/bigqm7wSTG/");}
 }
 </script>
 
@@ -452,6 +455,7 @@ containing a metal and a ring.
 </fieldset>
 </form>
 
+
 <!-- bigqm7w dataset -->
 <br>
 <form method="post" enctype="multipart/form-data">
@@ -516,6 +520,82 @@ The bigQM7ω dataset contains structures and properties of 12,880 molecules cont
 </table>
 </fieldset>
 </form>
+
+
+
+
+<!-- bigqm7w STG dataset -->
+<br>
+<form method="post" enctype="multipart/form-data">
+<fieldset>
+<!-- <legend class="l1">Open Access (under construction)</legend> -->
+<legend class="l1">Open Access</legend>
+<table width="100%" align="center">
+<col width="32%">
+<col width="45%">
+
+<tr>
+<td colspan="2"> <font style="font-size:15px;" /> </td>
+<td rowspan="2"> 
+<input type="button" class="button1" name="dset6" value="Access" onclick="openpage(name);"></a>
+</td>
+</tr>
+
+<tr>
+<td align="left">
+<img id="molimg" class="molimg" src="./Images/bigqm7w_STG.png" width=300 height=200 alt="            ">
+
+<!-- The Image Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById('molimg');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+</td>
+
+<td>
+<h3>Singlet-Triplet gap screen in bigQM7ω</h3>
+<font style="font-size:15px;"/>
+Browse ADC(2) singlet (S₁) and triplet (T₁) excitation energies and the S₀ → S₁ oscillator strength (f₀₁). The Access button opens the bigQM7ω singlet–triplet gap screen. 
+<br><br>
+<br><a href="" name="link7" onclick="openpage(name);"><br><i>
+Resilience of Hund's rule in the chemical space of small organic molecules
+</i>
+<br> A. Majumdar, R. Ramakrishnan<br>Phys. Chem. Chem. Phys. (2024)<br>
+https://doi.org/10.1039/d4cp00886c</a>
+<br>
+</td>
+</tr>
+</table>
+</fieldset>
+</form>
+
+
+
 
 
 </body>
