@@ -2,6 +2,7 @@
 const properties = [
   {key: 'S1_ADC2(eV)', label: 'S₁ excitation energy', unit: 'eV'},
   {key: 'T1_ADC2(eV)', label: 'T₁ excitation energy', unit: 'eV'},
+  {key: 'gap_ADC2(eV)', label: 'S₁ − T₁ gap', unit: 'eV', computed: true},
   {key: 'f01_ADC2(au)', label: 'S₀ → S₁ oscillator strength f₀₁', unit: 'a.u.'}
 ];
 const $ = id => document.getElementById(id);
@@ -33,11 +34,16 @@ function parseCSV(text) {
   if (row.some(value => value.trim())) records.push(row);
   const headers = records.shift();
   if (!headers) throw Error('CSV is empty.');
-  const required = ['SMI', 'Natoms', 'atoms', 'coords(Ang)', ...properties.map(p => p.key)];
+  const required = ['SMI', 'Natoms', 'atoms', 'coords(Ang)', ...properties.filter(p => !p.computed).map(p => p.key)];
   for (const key of required) if (!headers.includes(key)) throw Error(`Missing CSV column: ${key}`);
   return records.map((cells, i) => {
     if (cells.length !== headers.length) throw Error(`CSV row ${i + 2}: expected ${headers.length} columns, got ${cells.length}.`);
-    return {...Object.fromEntries(headers.map((key, j) => [key, cells[j].trim()])), index: i};
+    const molecule = {...Object.fromEntries(headers.map((key, j) => [key, cells[j].trim()])), index: i};
+    const s1 = Number(molecule['S1_ADC2(eV)']);
+    const t1 = Number(molecule['T1_ADC2(eV)']);
+    molecule['gap_ADC2(eV)'] = molecule['S1_ADC2(eV)'] !== '' && molecule['T1_ADC2(eV)'] !== '' && Number.isFinite(s1) && Number.isFinite(t1)
+      ? (s1 - t1).toFixed(6) : '';
+    return molecule;
   });
 }
 

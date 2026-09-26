@@ -19,7 +19,7 @@
       <label>SMILES <input id="search" type="search" placeholder="Search SMILES"></label>
       <div class="filters" id="filters"></div>
       <div class="toolbar">
-        <label>Sort by <select id="sort"><option value="index">CSV order</option><option value="S1_ADC2(eV)">S₁ energy</option><option value="T1_ADC2(eV)">T₁ energy</option><option value="f01_ADC2(au)">f₀₁</option></select></label>
+        <label>Sort by <select id="sort"><option value="index">CSV order</option><option value="S1_ADC2(eV)">S₁ energy</option><option value="T1_ADC2(eV)">T₁ energy</option><option value="gap_ADC2(eV)">S₁ − T₁</option><option value="f01_ADC2(au)">f₀₁</option></select></label>
         <label>Order <select id="order"><option value="asc">Ascending</option><option value="desc">Descending</option></select></label>
         <button id="reset" type="button">Reset filters</button>
       </div>
@@ -27,7 +27,7 @@
     <p id="status" role="status">Loading CSV…</p>
     <div class="layout">
       <section class="results" aria-label="Matching molecules">
-        <table><thead><tr><th>SMILES</th><th>Atoms</th><th>S₁ (eV)</th><th>T₁ (eV)</th><th>f₀₁ (a.u.)</th></tr></thead><tbody id="rows"></tbody></table>
+        <table><thead><tr><th>SMILES</th><th>Atoms</th><th>S₁ (eV)</th><th>T₁ (eV)</th><th>S₁ − T₁ (eV)</th><th>f₀₁ (a.u.)</th></tr></thead><tbody id="rows"></tbody></table>
         <div class="pagination"><button id="prev" type="button">Previous</button><span id="page"></span><button id="next" type="button">Next</button></div>
       </section>
       <aside id="detail" aria-live="polite"><p>Select a molecule to view its properties and 3D structure.</p></aside>
