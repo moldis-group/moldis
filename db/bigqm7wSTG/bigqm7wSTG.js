@@ -8,6 +8,16 @@ const properties = [
 const $ = id => document.getElementById(id);
 const state = {data: [], matches: [], page: 0, selected: null, token: 0};
 const pageSize = 25;
+const elements = ['C', 'H', 'N', 'O', 'F'];
+
+function countAtoms(value, expected) {
+  const atoms = JSON.parse(value.replace(/'/g, '"'));
+  if (!Array.isArray(atoms) || atoms.length !== Number(expected) ||
+      !atoms.every(atom => elements.includes(atom))) throw Error('Invalid atoms list.');
+  const counts = Object.fromEntries(elements.map(element => [element, 0]));
+  for (const atom of atoms) counts[atom]++;
+  return {atoms, counts};
+}
 
 // Quoted CSV fields may contain commas, as in atoms and coordinates.
 function parseCSV(text) {
@@ -43,11 +53,24 @@ function parseCSV(text) {
     const t1 = Number(molecule['T1_ADC2(eV)']);
     molecule['gap_ADC2(eV)'] = molecule['S1_ADC2(eV)'] !== '' && molecule['T1_ADC2(eV)'] !== '' && Number.isFinite(s1) && Number.isFinite(t1)
       ? (s1 - t1).toFixed(6) : '';
+    try {
+      const composition = countAtoms(molecule.atoms, molecule.Natoms);
+      molecule.atomList = composition.atoms;
+      molecule.counts = composition.counts;
+      molecule.formula = elements.filter(e => molecule.counts[e]).map(e =>
+        e + (molecule.counts[e] === 1 ? '' : molecule.counts[e])).join('');
+    } catch (error) { throw Error(`CSV row ${i + 2}: ${error.message}`); }
     return molecule;
   });
 }
 
 function setup() {
+  for (const element of elements) {
+    const label = document.createElement('label'); label.textContent = `${element} atoms`;
+    const input = document.createElement('input'); input.type = 'number'; input.min = '0'; input.step = '1';
+    input.placeholder = 'any'; input.dataset.element = element;
+    input.addEventListener('input', render); label.append(input); $('composition').append(label);
+  }
   for (const property of properties) {
     const div = document.createElement('div'); div.className = 'filter';
     const title = document.createElement('span'); title.textContent = `${property.label} (${property.unit})`; div.append(title);
@@ -70,6 +93,8 @@ function setup() {
 }
 function render() {
   const term = $('search').value.trim().toLowerCase();
+  const composition = [...document.querySelectorAll('[data-element]')]
+    .filter(input => input.value !== '');
   const bounds = [...document.querySelectorAll('.filter')].map(filter => ({
     key: filter.querySelector('input[data-bound="min"]').dataset.key,
     min: filter.querySelector('input[data-bound="min"]').value,
@@ -77,6 +102,8 @@ function render() {
   })).filter(b => b.min !== '' || b.max !== '');
   state.matches = state.data.filter(m => {
     if (term && !m.SMI.toLowerCase().includes(term)) return false;
+    if (!composition.every(input => Number.isInteger(Number(input.value)) &&
+        Number(input.value) >= 0 && m.counts[input.dataset.element] === Number(input.value))) return false;
     return bounds.every(b => {
       const value = Number(m[b.key]);
       return m[b.key] !== '' && Number.isFinite(value) &&
@@ -98,7 +125,7 @@ function paint() {
   for (const molecule of state.matches.slice(state.page * pageSize, (state.page + 1) * pageSize)) {
     const tr = document.createElement('tr'); tr.tabIndex = 0;
     if (molecule.index === state.selected) tr.className = 'selected';
-    for (const key of ['SMI', 'Natoms', ...properties.map(p => p.key)]) {
+    for (const key of ['SMI', 'formula', 'Natoms', ...properties.map(p => p.key)]) {
       const td = document.createElement('td'); td.textContent = molecule[key] || '—'; tr.append(td);
     }
     tr.addEventListener('click', () => show(molecule));
@@ -108,7 +135,7 @@ function paint() {
 }
 function xyzFromRow(molecule) {
   // These two CSV fields are Python-style lists of symbols and Cartesian coordinates.
-  const atoms = JSON.parse(molecule.atoms.replace(/'/g, '"'));
+  const atoms = molecule.atomList;
   const coords = JSON.parse(molecule['coords(Ang)']);
   const count = Number(molecule.Natoms);
   if (!Array.isArray(atoms) || !Array.isArray(coords) || !Number.isInteger(count) ||
@@ -127,7 +154,7 @@ function show(molecule) {
   const token = ++state.token; state.selected = molecule.index; paint();
   const detail = $('detail'); detail.replaceChildren();
   const h2 = document.createElement('h2'); h2.textContent = molecule.SMI; detail.append(h2);
-  const summary = document.createElement('p'); summary.textContent = `${molecule.Natoms} atoms · ADC(2)`; detail.append(summary);
+  const summary = document.createElement('p'); summary.textContent = `${molecule.formula} · ${molecule.Natoms} atoms · ADC(2)`; detail.append(summary);
   const dl = document.createElement('dl');
   for (const p of properties) {
     const dt = document.createElement('dt'), dd = document.createElement('dd');
