@@ -121,7 +121,7 @@ async function show(row){
   const stem=row.filename;
   figure(el,`dsgdb9nsd_svg/${stem}.svg`,'2D structure');
   figure(el,`dsgdb9nsd_vib/${stem}.svg`,'Vibrational spectrum');
-  figure(el,`dsgdb9nsd_nmr/${stem.slice(0,6)}${stem.slice(9,16)}_nmr_img.png`,'NMR spectrum');
+  figure(el,`dsgdb9nsd_nmr/${stem.slice(0,6)}${stem.slice(9,16)}_nmr.png`,'NMR spectrum');
   try{
     if(typeof $3Dmol==='undefined')throw Error('3Dmol library unavailable');
     const response=await fetch(xyzPath);if(!response.ok)throw Error(`XYZ HTTP ${response.status}`);
