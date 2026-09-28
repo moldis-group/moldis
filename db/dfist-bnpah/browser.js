@@ -44,13 +44,22 @@ function configure(){
   $('subtitle').textContent=level==='3'?'Optimized ωB97X-D3/def2-TZVP XYZ structures.':
     'Search PAH groups, excitation energies, and singlet–triplet gaps (eV).';
   $('method-label').hidden=level!=='4';
+  $('molecule-label').hidden=level!=='3';
   $('pah-label').hidden=level==='3';
   $('range-heading').hidden=level==='3';
   for(const id of ['search','pah'])$(id).addEventListener('input',render);
   for(const id of ['sort','order'])$(id).addEventListener('change',render);
   $('method').addEventListener('change',load);
+  $('molecule').addEventListener('change',()=>{
+    const row=state.data.find(item=>item.Mol_Index===$('molecule').value);
+    if(!row)return;
+    $('search').value=row.Mol_Index;
+    render();
+    show(row);
+  });
   $('reset').addEventListener('click',()=>{
     document.querySelectorAll('.query input').forEach(el=>el.value='');
+    $('molecule').value='';
     $('sort').value='Mol_Index';$('order').value='asc';render();
   });
   $('prev').addEventListener('click',()=>{state.page--;paint()});
@@ -59,6 +68,14 @@ function configure(){
 }
 function buildControls(){
   $('filters').replaceChildren();$('sort').replaceChildren();
+  $('molecule').replaceChildren();
+  if(level==='3'){
+    const prompt=document.createElement('option');prompt.value='';prompt.textContent='Choose a name…';$('molecule').append(prompt);
+    for(const row of [...state.data].sort((a,b)=>a.Mol_Index.localeCompare(b.Mol_Index,undefined,{numeric:true}))){
+      const option=document.createElement('option');option.value=row.Mol_Index;
+      option.textContent=row.Mol_Index;$('molecule').append(option);
+    }
+  }
   const fields=state.columns.filter(c=>c==='Mol_Index'||c==='PAH'||c==='S1'||c==='T1'||c==='STG'||c==='f01');
   const labels={Mol_Index:'Molecule ID',PAH:'PAH index',S1:'S₁ (eV)',T1:'T₁ (eV)',STG:'S₁ − T₁ (eV)',f01:'f₀₁ (a.u.)'};
   for(const key of fields){
@@ -126,6 +143,7 @@ function xyzPaths(id){
 }
 async function show(row){
   const token=++state.token;state.selected=row.Mol_Index;paint();
+  if(level==='3')$('molecule').value=row.Mol_Index;
   const detail=$('detail');detail.replaceChildren();
   const title=document.createElement('h2');title.textContent=row.Mol_Index;detail.append(title);
   if(level!=='3'){
