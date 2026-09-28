@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DFIST-BNPAH browser | MolDis</title>
+  <link rel="stylesheet" href="dfist-bnpah.css">
+  <script src="https://3Dmol.org/build/3Dmol-min.js" defer></script>
+  <script src="browser.js" defer></script>
+</head>
+<body>
+  <header><a href="./">← DFIST-BNPAH levels</a><h1 id="heading">Loading dataset…</h1><p id="subtitle"></p></header>
+  <main>
+    <section class="query" aria-label="Search and filter molecules">
+      <div class="toolbar">
+        <label id="method-label" hidden>Method <select id="method"><option value="ladc2">LADC2/AVDZ</option><option value="lcc2">LCC2/AVDZ</option></select></label>
+        <label>Molecule ID <input id="search" type="search" placeholder="e.g. BNPAH_00311"></label>
+        <label id="pah-label">PAH index <input id="pah" type="number" min="0" step="1" placeholder="any"></label>
+        <label>Sort by <select id="sort"></select></label>
+        <label>Order <select id="order"><option value="asc">Ascending</option><option value="desc">Descending</option></select></label>
+        <button id="reset" type="button">Reset filters</button>
+      </div>
+      <h2 id="range-heading">Property ranges</h2><div id="filters" class="filters"></div>
+    </section>
+    <p id="status" role="status">Loading CSV…</p>
+    <div class="layout">
+      <section class="results" aria-label="Matching molecules">
+        <table><thead id="thead"></thead><tbody id="rows"></tbody></table>
+        <div class="pagination"><button id="prev" type="button">Previous</button><span id="page"></span><button id="next" type="button">Next</button></div>
+      </section>
+      <aside id="detail" aria-live="polite"><p>Select a molecule to see its properties and structure.</p></aside>
+    </div>
+  </main>
+  <footer>DFIST-BNPAH · MolDis</footer>
+</body>
+</html>
